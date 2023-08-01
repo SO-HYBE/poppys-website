@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    margin:0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+section{
+    height: 100vh;
+
+}
+
+/* Hide the default scrollbar */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Style the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 4px;
+}
+
+/* Style the scrollbar thumb when inactive (not being hovered) */
+body::-webkit-scrollbar-thumb:vertical {
+  transition: background 0.2s ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+}

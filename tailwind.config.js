@@ -12,7 +12,29 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        bulleto: ['var(--bulleto)']
+      }
+    },screens: {
+      'mobM': '375px',
+
+      'mobL': '425px',
+
+      'tablet': '768px',
+      // => @media (min-width: 640px) { ... }
+
+      'laptop': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '1280px',
+      // => @media (min-width: 1280px) { ... }
+      'lapL': '1440px',
+      
+      '4k': '2560px',
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/container-queries'),
+    require('prettier-plugin-tailwindcss'),
+  ],
 }
