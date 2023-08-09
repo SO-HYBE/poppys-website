@@ -20,12 +20,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent;
+  background: #fffefc;
 }
 
 /* Style the scrollbar thumb */
 body::-webkit-scrollbar-thumb {
-  background: grey;
+  background: #b80c09;
   border-radius: 4px;
 }
 
@@ -35,5 +35,5 @@ body::-webkit-scrollbar-thumb:vertical {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #707070;
+  background: #a10705;
 }

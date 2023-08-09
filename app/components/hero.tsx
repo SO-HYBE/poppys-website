@@ -1,71 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger , CustomEase } from "gsap/all";
 import melt from '../../public/static/videos/melt.mp4';
 import Image, { StaticImageData } from "next/image";
 import main from '../../public/skate.png'
 import useIsomorphicLayoutEffect from 'use-isomorphic-layout-effect';
 import SplitType from "split-type";
 
+gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Hero(props:{src:StaticImageData, hov: StaticImageData}){
-
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
-
-  //------------ Button animtion -----------------
-  useEffect(()=> {
-
-    document.querySelectorAll('.button').forEach(button => {
-
-    let div = document.createElement('div'),
-        letters = (button.textContent as String).trim().split('');
-
-    function elements(letter:string , index:number, array:Array<string>) {
-
-        let element = document.createElement('span'),
-            part = (index >= array.length / 2) ? -1 : 1,
-            position = (index >= array.length / 2) ? array.length / 2 - index + (array.length / 2 - 1) : index,
-            move = position / (array.length / 2),
-            rotate = 1 - move;
-
-        element.innerHTML = !letter.trim() ? '&nbsp;' : letter;
-        element.style.setProperty('--move', move as any);
-        element.style.setProperty('--rotate', rotate as any);
-        element.style.setProperty('--part', part as any);
-
-        div.appendChild(element);
-
-    }
-
-    letters.forEach(elements);
-
-    button.innerHTML = div.outerHTML;
-
-    button.addEventListener('mouseenter', e => {
-        if(!button.classList.contains('out')) {
-            button.classList.add('in');
-        }
-    });
-
-    button.addEventListener('mouseleave', e => {
-        if(button.classList.contains('in')) {
-            button.classList.add('out');
-            setTimeout(() => button.classList.remove('in', 'out'), 950);
-        }
-    });
-
-    });
-  
-  },[])
+export default function Hero(){
 
   //------------------ Hero content animation -----------------
     const ref  : any= useRef();
@@ -73,7 +18,7 @@ export default function Hero(props:{src:StaticImageData, hov: StaticImageData}){
     useIsomorphicLayoutEffect(() => {
       ctx.add(() => {
         var tl : GSAPTimeline = gsap.timeline({defaults: {duration:1, ease: 'power3.in'}});
-        tl.to('.hero-bg-vid',{duration:1.5, y:0 ,autoAlpha:1, visibility: 'visible'})
+        tl.to('.hero-bg-vid',{duration:1, y:0 ,autoAlpha:1, visibility: 'visible'})
         if (typeof window !== 'undefined') {
               window.requestAnimationFrame(function() {
               const splitHead = document.querySelectorAll('.span-container')
@@ -81,10 +26,43 @@ export default function Hero(props:{src:StaticImageData, hov: StaticImageData}){
               const head = new SplitType(char as HTMLElement, { types: 'chars' })
               gsap.to(head.chars, {y:0, autoAlpha:1, ease: 'power3.in', duration:1.5, stagger: 0.008, visibility: 'visible'})
               gsap.to('.span-container', {y:0, autoAlpha:1, ease: 'power3.in', duration:1.5, visibility: 'visible'})
+              gsap.to('.hero', {backgroundColor: '#00000061'})
             })
             tl.to('#details',{duration:1.5, y:0 ,autoAlpha:1, visibility: 'visible'})
-            tl.to('.main',{y:0,x:0, autoAlpha:1, ease:'back', visibility: 'visible'})   
+            tl.to('.main',{y:0,x:0, autoAlpha:1, ease:'back.out', visibility: 'visible'})   
              });
+        var tl1 : GSAPTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.hero',
+            pin: true,
+            scrub: 1,
+            start: '10% start',
+            end: '1800vw center'
+          },
+          defaults: {
+            delay:0
+          }
+        })
+        tl1.to('.text-move',{duration:1.5, y:-500, delay: 0})
+        const mediaQuery = window.matchMedia('(min-width: 768px)')
+        // Check if the media query is true
+        if (mediaQuery.matches) {
+          tl1.to('.main', {y:1000,x:-1000, duration:1.5, ease:'back.in', display:'none', delay: 0})
+        }
+        tl1.to('.hero-p', {display: 'none', delay: 0})
+        tl1.to('.hero', {backgroundColor: '#ffc0cb'})
+        tl1.to('.hero-content', {visibility: 'hidden'})
+        const mediaQuery1 = window.matchMedia('(min-width: 2560px)')
+        // Check if the media query is true
+        if (mediaQuery1.matches) {
+          tl1.to('.bg-vid',{scale: '0.6 0.8' , duration:2.5, position: 'relative' , borderRadius:'10px', delay: 2})
+        }
+        tl1.to('.bg-vid',{scale: '0.6 0.8' , duration:2.5, position: 'relative' , borderRadius:'10px', delay: 0})
+        tl1.to('.marq', {y:"-40vh", duration:2, ease: "power4.out",autoAlpha:1, visibility:"visisble" ,stagger:1})
+        tl1.to('.marquee-1', {duration:1, ease: "power4.out",autoAlpha:1, visibility:"visisble"})
+        tl1.to('.marquee-2', {duration:0.5, ease: "power4.out",autoAlpha:1, visibility:"visisble"})
+        tl1.to('.marquee-3', {duration:1,delay:0.5, ease: "power4.out",autoAlpha:1, visibility:"visisble"})
+        
     }});
       return () => ctx.revert();
     }, []);
@@ -92,32 +70,18 @@ export default function Hero(props:{src:StaticImageData, hov: StaticImageData}){
 
     return (
 
-      <><section>
-        <div className="hero bg-[#00000061]" ref={ref}>
-
-          <header className="hero-head flex justify-between fixed z-[99] w-full top-0 left-0">
-            <div className="hover:height-[7vh]" id="img-cont" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <a href="#"><Image className="h-[6vh] w-auto left-0 mt-[3.5vh] ml-[5vw] logo " priority src={isHovering ? props.hov : props.src} alt="LOGO"></Image></a>
-            </div>
-            <nav className="font-bulleto">
-              <ul className="nav-item text-[2.75vh] flex gap-1 flex-row items-center justify-center mt-[3vh] mr-[6vw]">
-                <li><button className="button sm-dev md-dev alternative">Home</button></li>
-                <li><button className="button alternative">Catalog</button></li>
-                <li><button className="button sm-dev alternative">About Us</button></li>
-                <li><button className="button alternative">Contact Us</button></li>
-              </ul>
-            </nav>
-          </header>
-          <div className="hero-content absolute z-10 top-[20vh] text-[2.3em] text-white h-[70vh]">
-            <div className="span-container mt-[5vh] -ml-5 font-bulleto">
+      <><section className="">
+        <div className="hero h-[115vh] bg-[#00000000] overflow-hidden" ref={ref}>
+          <div className="hero-content absolute z-10 top-[18vh] text-[2.3em] text-white h-[70vh]">
+            <div className="span-container mt-[5vh] -ml-5 font-bulleto text-move">
               <span className="hero-text upper block ml-[10vw]">Life is like</span>
               <span className="hero-text upper block ml-[15vw]">an Ice cream...</span>
               <span className="hero-text block ml-[20vw]">Enjoy it before</span>
               <span className="hero-text block ml-[25vw]">it meltsss..</span>
             </div>
             <div className="rigth-cont flex flex-col basis-[50vh]">
-              <div className="hero-p text-[.390em] pl-[6vw] pr-[1vw] w-[90vw] h-[70vh] mt-[10vh]">
-                <p id="details">Indulge in the delightful world of ice creams! From creamy classics to exotic flavors, these frozen treats offer a sweet escape on hot days, creating moments of pure bliss</p>
+              <div className="hero-p text-[.390em] pl-[6vw] pr-[1vw] w-[90vw] h-[70vh] mt-[3vh]">
+                <p className="text-move" id="details">Welcome to Poppy's, where nostalgia takes center stage and every scoop of ice cream is a ticket to cherished memories. We're not just an ice cream shop; we're a time-traveling adventure back to the carefree days of yesteryears.</p>
                 <div className="h-fit main hidden w-fit">
                   <Image className="pict -rotate-45 mt-[5vh] ml-[3vw]" priority src={main} alt={""} style={{
           width: '70%',
@@ -129,15 +93,66 @@ export default function Hero(props:{src:StaticImageData, hov: StaticImageData}){
             </div>
 
           </div>
-          <div className="hero-bg-vid z-[-99] w-auto relative">
-            <video className="bg-vid h-[100vh] w-[150vw] object-cover " muted autoPlay loop>
+          <div className="hero-bg-vid relative z-[-99] w-auto flex">
+            <video className="bg-vid h-[120vh] w-[100vw] object-cover justify-center" muted autoPlay loop>
               <source src={melt} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-        </div>
-      </section><section>
+          <div className="marq h-[50vh]">
+            <div className="marquee">
+            <div className="marquee__group">
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
 
-        </section></>
+            </div>
+            <div className="marquee__group" aria-hidden="true">
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+            </div>
+            </div>
+            <div className="marquee-2">
+            <div className="marquee__group-2 marquee__group">
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+
+            </div>
+            <div className="marquee__group-2 marquee__group" aria-hidden="true">
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+              <span>GET POPPY'S➺</span>
+            </div>
+            </div>
+            <div className="marquee-3">
+            <div className="marquee__group">
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+
+            </div>
+            <div className="marquee__group" aria-hidden="true">
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+              <span>Too Hot?!➺</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section></>
     );
 }
