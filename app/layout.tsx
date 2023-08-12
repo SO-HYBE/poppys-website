@@ -1,13 +1,14 @@
-import Head from 'next/head'
 import './styles/globals.css'
+import Head from 'next/head'
 import type { Metadata } from 'next'
 import heroStyle from './styles/hero.scss'
 import navbarStyle from './styles/navbar.scss'
 import aboutStyle from './styles/about.scss'
+import ReactDOM from 'react-dom'
 
 export const metadata: Metadata = {
   title: "Poppy's",
-  description: 'Your favorite ice cream place !',
+  description: 'Your favorite ice cream place !', 
 }
 
 export default function RootLayout({
@@ -15,6 +16,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html  lang="en">
       <Head>

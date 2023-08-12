@@ -1,0 +1,121 @@
+@media (min-width: 425px) {
+    .about-head{
+        padding-bottom: 140px;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-head{
+        padding-bottom: 265px;
+    }
+    .about-image{
+        margin-right: 5vw;
+        margin-left: 5vw;
+        margin-top: 3vh;
+    }
+    .about-section{
+        height: 170vh;
+    }
+    .about-p{
+        margin-right: 5vw; 
+        margin-left: 5vw; 
+    }
+}
+@media (min-width: 1024px) {
+    .about-head{
+        padding-bottom: 280px;
+    }
+    .about-image{
+        margin-right: 10vw;
+        margin-left: 10vw;
+        margin-top: 3vh;
+        top: 20%;
+    }
+    .about-section{
+        height: 180vh;
+    }
+    .about-p{
+        font-size: 1.15em;
+        margin-left: 10vw; 
+        margin-right: 10vw; 
+    }
+}
+
+@media (min-width: 1240px) {
+    .about-p{
+        top: 37vw;
+    }
+    .about-section{
+        bottom: -1434px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .about-head{
+        padding-bottom: 280px;
+    }
+    .about-image{
+        margin-right: 15vw;
+        margin-left: 15vw;
+        margin-top: -23vh;
+        top: 30%;
+    }
+    .about-section{
+        height: 180vh;
+        bottom: -1427px;
+    }
+    .about-p{
+        font-size: 1.3em;
+        margin-left: 15vw; 
+        margin-right: 15vw; 
+    }
+}
+
+@media (min-width: 1920px) {
+    .about-p{
+        top: 20vw;
+        margin-right: 20vw;
+        margin-left: 20vw;
+    }
+    .about-section{
+        bottom: -1434px;
+        height: 130vh;
+    }
+    .about-image{
+        margin-top: -16vh;
+        margin-right: 20vw;
+        margin-left: 20vw;
+    }
+    .about-head{
+        padding-bottom: 440px;
+    }
+    .about-section{
+        bottom: -1267px;
+    }
+}
+@media (min-width: 2560px) {
+    .about-head{
+        padding-bottom: 540px;
+        padding-top: 25vh;
+        font-size: 7rem;
+    }
+    .about-image{
+        margin-right: 20vw;
+        margin-left: 20vw;
+        margin-top: -13vh;
+        top: 30%;
+    }
+    .abt-img{
+        border-radius: 1.375rem;
+    }
+    .about-section{
+        height: 190vh;
+        bottom: -1190px;
+    }
+    .about-p{
+        font-size: 2.5em;
+        margin-left: 20vw; 
+        margin-right: 20vw; 
+        top:55vh;
+    }
+}

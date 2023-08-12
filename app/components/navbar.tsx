@@ -60,7 +60,7 @@ export default function Navbar(props:{src:StaticImageData, hov: StaticImageData}
     },[])
 
     return(
-        <header className="hero-head flex justify-between fixed z-[99] w-full top-0 left-0 overflow-hidden">
+        <header className="hero-head flex justify-between fixed z-[99] w-[100vw] top-0 left-0">
         <div className="hover:height-[7vh]" id="img-cont" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <a href="#"><Image className="h-[6vh] w-auto left-0 mt-[3.5vh] ml-[4vw] logo " priority src={isHovering ? props.hov : props.src} alt="LOGO"></Image></a>
         </div>

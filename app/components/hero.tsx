@@ -23,10 +23,10 @@ export default function Hero(){
               window.requestAnimationFrame(function() {
               const splitHead = document.querySelectorAll('.span-container')
               splitHead.forEach((char,i) => {
-              const head = new SplitType(char as HTMLElement, { types: 'chars' })
+              const head = new SplitType(char as HTMLElement, { types: 'words, chars' })
+              gsap.set(head.chars, {y: 300, visibility: 'hidden'})
               gsap.to(head.chars, {y:0, autoAlpha:1, ease: 'power3.in', duration:1.5, stagger: 0.008, visibility: 'visible'})
               gsap.to('.span-container', {y:0, autoAlpha:1, ease: 'power3.in', duration:1.5, visibility: 'visible'})
-              gsap.to('.hero', {backgroundColor: '#00000061'})
             })
             tl.to('#details',{duration:1.5, y:0 ,autoAlpha:1, visibility: 'visible'})
             tl.to('.main',{y:0,x:0, autoAlpha:1, ease:'back.out', visibility: 'visible'})   
@@ -59,7 +59,7 @@ export default function Hero(){
         }
         tl1.to('.bg-vid',{scale: '0.6 0.8' , duration:2.5, position: 'relative' , borderRadius:'10px', delay: 0})
         tl1.to('.marq', {y:"-40vh", duration:2, ease: "power4.out",autoAlpha:1, visibility:"visisble" ,stagger:1})
-        tl1.to('.marquee-1', {duration:1, ease: "power4.out",autoAlpha:1, visibility:"visisble"})
+        tl1.to('.marquee', {duration:1, ease: "power4.out",autoAlpha:1, visibility:"visisble"})
         tl1.to('.marquee-2', {duration:0.5, ease: "power4.out",autoAlpha:1, visibility:"visisble"})
         tl1.to('.marquee-3', {duration:1,delay:0.5, ease: "power4.out",autoAlpha:1, visibility:"visisble"})
         
@@ -71,7 +71,7 @@ export default function Hero(){
     return (
 
       <><section className="">
-        <div className="hero h-[115vh] bg-[#00000000] overflow-hidden" ref={ref}>
+        <div className="hero h-[115vh] overflow-hidden pb-[50vh]" ref={ref}>
           <div className="hero-content absolute z-10 top-[18vh] text-[2.3em] text-white h-[70vh]">
             <div className="span-container mt-[5vh] -ml-5 font-bulleto text-move">
               <span className="hero-text upper block ml-[10vw]">Life is like</span>
