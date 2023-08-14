@@ -7,9 +7,15 @@ import { useEffect } from 'react';
 import localFont from 'next/font/local'
 import hov from '../public/white-svg.svg';
 import About from './components/about';
+import Catalog from './components/catalog'
+import {Poppins} from 'next/font/google'
 
 const bulleto = localFont({ src: './styles/BULLETTO-KILLA.ttf', variable: '--bulleto' })
-
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ["300" , "100" , "200" , "400" , "500" , "600" , "700" , "800" , "900"]
+})
 export default function Home() {
   //-------- Lenis Smooth Scroll---------
   useEffect(()=>{
@@ -32,10 +38,11 @@ export default function Home() {
   // }
 
   return (
-    <main className={`${bulleto.variable} font-sans`}>
+    <main className={`${bulleto.variable} ${poppins.variable} font-sans`}>
       <Navbar src={head} hov={hov}/>
       <Hero/>
       <About/>
+      <Catalog/>
     </main>
   )
 }

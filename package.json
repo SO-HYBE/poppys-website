@@ -34,6 +34,7 @@
     "use-isomorphic-layout-effect": "^1.1.2"
   },
   "devDependencies": {
+    "@types/react-curved-text": "^2.0.0",
     "file-loader": "^6.2.0",
     "postcss-nested": "^6.0.1",
     "prettier": "^3.0.0",

@@ -14,7 +14,6 @@ export default function About(){
     const aboutCtx = gsap.context(aboutRef);
     useIsomorphicLayoutEffect(()=>{
         aboutCtx.add(()=>{
-            const aboutTl : GSAPTimeline = gsap.timeline({defaults: {duration: 1}})
             if(typeof window != 'undefined' ){
                 window.requestAnimationFrame(function(){
                     const splitAbout = document.querySelectorAll('.about-p');
@@ -97,7 +96,7 @@ export default function About(){
     },[]);
 
     return(
-        <><section className="about-section h-[155vh] relative bottom-[-1473px] mt-[100px] snap-mandatory snap-x ">
+        <section className="about-section h-[155vh] relative bottom-[-1473px] mt-[100px] snap-mandatory snap-x ">
             <div className="about bg-white flex flex-col snap-start" ref={aboutRef}>
                 <h1 className="about-head flex justify-center font-bulleto text-5xl pt-[100px] pb-[120px] bg-[#ffc0cb]">About Us</h1>
                 <div className="about-content flex flex-col-reverse mt-5">
@@ -109,6 +108,6 @@ export default function About(){
                     </div>
                 </div>
             </div>
-        </section><section className="relative bottom-[-2000px]"></section></>
+        </section>
     )
 }
