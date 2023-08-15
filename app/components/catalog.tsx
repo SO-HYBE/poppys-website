@@ -14,6 +14,8 @@ import strberries from '../../public/strawberry-collection.png';
 import wtrmBg from '../../public/wtrm-bg.jpg';
 import wtrmelon from '../../public/wt-ch-cream.png';
 import wtrmelons from '../../public/w-collection.png';
+import strPop from '../../public/str-pop.png';
+import mngPop from '../../public/mng-pop.png';
 
 
 
@@ -588,6 +590,113 @@ export default function Catalog() {
                     const screenWidth3 = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
                         
                     media3(screenWidth3);
+
+                    function media4(width: number) {
+                        if (width >= 2560){
+                            gsap.from('.pop-left',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    markers: true,
+                                    scrub: true
+
+                                },
+                                x: -1000,
+                                rotate: '0deg',
+                                y:0
+                            })
+                            gsap.from('.pop-right',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    scrub: true
+
+                                },
+                                x: 1000,
+                                rotate: '0deg',
+                                y:0
+                            })}
+                        else if (width >= 1024){
+                            gsap.from('.pop-left',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    markers: true,
+                                    scrub: true
+
+                                },
+                                x: -600,
+                                rotate: '0deg',
+                                y:0
+                            })
+                            gsap.from('.pop-right',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    scrub: true
+
+                                },
+                                x: 600,
+                                rotate: '0deg',
+                                y:0
+                            })
+                        }else if (width >= 768){
+                            gsap.from('.pop-left',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    markers: true,
+                                    scrub: true
+
+                                },
+                                x: -320,
+                                rotate: '0deg'
+                            })
+                            gsap.from('.pop-right',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    scrub: true
+
+                                },
+                                x: 320,
+                                rotate: '0deg'
+                            })
+                        } else {
+                            gsap.from('.pop-left',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    markers: true,
+                                    scrub: true
+
+                                },
+                                x: -300
+                            })
+                            gsap.from('.pop-right',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    scrub: true
+
+                                },
+                                x: 300
+                            })
+                        }
+                    };
+
+                    const screenWidth4 = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                    
+                    media4(screenWidth4);
+
                 });
             }
 
@@ -598,7 +707,7 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section relative bottom-[-1640px] h-[600vh] bg-[#ffc0cb] overflow-hidden">
+        <section className="catalog-section relative bottom-[-1640px] h-[650vh] bg-[#ffc0cb] overflow-hidden">
             <div className="catalog" ref={catRef}>
                 <div className="catalog-content">
                     <div className="catalog-head">
@@ -659,12 +768,14 @@ export default function Catalog() {
                             <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-3" src={wtrmBg} alt={""}></Image>
                         </div>
                         <div className="product bg-white" id="product-4">
-                            <div className="pop-content relative">
-                                <div className="pop-head flex justify-center">
-                                    <h1 className="pt-8 font-bulleto text-xl">We Also Have Popsiclesss !!</h1>
+                            <div className="pop-content relative h-[150vh]">
+                                <div className="pop-head flex flex-col">
+                                    <h2 className="pt-8 font-bulleto text-center text-[1.5em]">We Also Have</h2>
+                                    <h1 className="pt-5 font-bulleto text-center mt-[-10px] text-5xl">Popsiclesss !!</h1>
                                 </div>
-                                <div className="pop-img">
-                                    
+                                <div className="pop-img flex flex-row justify-around mx-10 mt-10">
+                                    <Image className="pop-left relative w-[80%] z-30" src={mngPop} alt={""}></Image>
+                                    <Image className="pop-right relative w-[80%] " src={strPop} alt={""}></Image>
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,35 @@
 
 /*------------------- Media Queries -------------------*/
 
+@media (min-width: 375px){
+    .pop-left{
+        width: 75%;
+    }
+    .pop-right{
+        width: 75%;
+    }
+}
+@media (min-width: 425px){
+    .pop-left{
+        width: 70%;
+    }
+    .pop-right{
+        width: 70%;
+    }
+}
+
 @media (min-width: 768px) {
+    .catalog-section{
+        height: 670vh;
+    }
+    .pop-left{
+        width: 40vh;
+        transform: rotate(25deg);
+    }
+    .pop-right{
+        width: 40vh;
+        transform: rotate(-25deg);
+    }
     .ov-img{
         visibility: visible;
     }
@@ -56,6 +84,22 @@
     }
 }
 @media (min-width: 1024px) {
+    .pop-head{
+        h2{
+            font-size: 1.5em;
+        }
+    }
+    .catalog-section{
+        height: 700vh;
+    }
+    .pop-left{
+        width: 40vh;
+        transform: rotate(30deg) translateX(30px);
+    }
+    .pop-right{
+        width: 40vh;
+        transform: rotate(-30deg) translateX(-30px);
+    }
     .ov-img{
         visibility: visible;
     }
@@ -100,6 +144,22 @@
     }
 }
 @media (min-width: 1440px) {
+    .pop-left{
+        width: 50vh;
+        transform: rotate(30deg) translateX(40px);
+    }
+    .pop-right{
+        width: 50vh;
+        transform: rotate(-30deg) translateX(-40px);
+    }
+    .pop-head{
+        h1{
+            font-size: 4em;
+        }
+        h2{
+            font-size: 2em;
+        }
+    }
     #h1-p2{
         width: 90%;
         margin-left: 2vw;
@@ -157,6 +217,16 @@
     }
 }
 @media (min-width: 2560px) {
+    .pop-head{
+        h1{
+            font-size: 6em;
+            margin-top: 3vh;
+        }
+        h2{
+            font-size: 4em;
+             padding-top: 10vh;
+        }
+    }
     #ov-3{
         margin-left: 5vh;
     }
