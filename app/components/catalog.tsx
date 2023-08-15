@@ -598,7 +598,6 @@ export default function Catalog() {
                                     trigger: '.pop-img',
                                     start: 'top center',
                                     end: 'bottom bottom',
-                                    markers: true,
                                     scrub: true
 
                                 },
@@ -617,14 +616,39 @@ export default function Catalog() {
                                 x: 1000,
                                 rotate: '0deg',
                                 y:0
-                            })}
-                        else if (width >= 1024){
+                            })
+                        } else if ( width >= 1920){
                             gsap.from('.pop-left',{
                                 scrollTrigger: {
                                     trigger: '.pop-img',
                                     start: 'top center',
                                     end: 'bottom bottom',
                                     markers: true,
+                                    scrub: true
+
+                                },
+                                x: -1000,
+                                rotate: '0deg',
+                                y:0
+                            });
+                            gsap.from('.pop-right',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
+                                    scrub: true
+
+                                },
+                                x: 1000,
+                                rotate: '0deg',
+                                y:0
+                            });
+                        } else if (width >= 1024){
+                            gsap.from('.pop-left',{
+                                scrollTrigger: {
+                                    trigger: '.pop-img',
+                                    start: 'top center',
+                                    end: 'bottom bottom',
                                     scrub: true
 
                                 },
@@ -650,7 +674,6 @@ export default function Catalog() {
                                     trigger: '.pop-img',
                                     start: 'top center',
                                     end: 'bottom bottom',
-                                    markers: true,
                                     scrub: true
 
                                 },
@@ -674,7 +697,6 @@ export default function Catalog() {
                                     trigger: '.pop-img',
                                     start: 'top center',
                                     end: 'bottom bottom',
-                                    markers: true,
                                     scrub: true
 
                                 },
