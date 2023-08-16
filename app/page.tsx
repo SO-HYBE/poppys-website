@@ -7,8 +7,9 @@ import { useEffect } from 'react';
 import localFont from 'next/font/local'
 import hov from '../public/white-svg.svg';
 import About from './components/about';
-import Catalog from './components/catalog'
-import {Poppins} from 'next/font/google'
+import Catalog from './components/catalog';
+import Merch from './components/merch'
+import {Poppins} from 'next/font/google';
 
 const bulleto = localFont({ src: './styles/BULLETTO-KILLA.ttf', variable: '--bulleto' })
 const poppins = Poppins({
@@ -43,6 +44,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Catalog/>
+      <Merch/>
     </main>
   )
 }

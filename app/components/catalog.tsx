@@ -36,8 +36,8 @@ export default function Catalog() {
                         gsap.from(catalog.chars, {
                             scrollTrigger: {
                                 trigger: '.catalog',
-                                start: '10% center',
-                                end: '40% center',
+                                start: '10% 60%',
+                                end: '40% 60%',
                                 scrub: false,                                
                                 toggleActions: 'play play restart restart'
                             },
@@ -45,7 +45,7 @@ export default function Catalog() {
                             y: 20,
                             transformOrigin: 'top',
                             stagger: 0.1,
-                            duration: 0.3
+                            duration: 0.1
                         }) 
                     });
                     gsap.to('.catalog-section', {
@@ -182,10 +182,10 @@ export default function Catalog() {
                             start: 'top 80%',
                             end: 'bottom 80%'
                         },
-                        y: 60
+                        y: 80
                     });
                     gsap.fromTo('#img-1',{
-                        y:-10
+                        y:-20
                     },{
                         scrollTrigger: {
                             trigger: '#product-1',
@@ -193,7 +193,7 @@ export default function Catalog() {
                             start: 'top 70%',
                             end: 'bottom 70%'
                         },
-                        y: 80,
+                        y: 120,
                         delay:0.2
                     });
                     gsap.fromTo('#bg-1',{
@@ -437,7 +437,7 @@ export default function Catalog() {
                                     start: 'top 50%',
                                     end: 'bottom 50%'
                                 },
-                                y: 100,
+                                y: 150,
                                 delay:0.3
                             });
                         } else if ( width >= 1920){
@@ -592,7 +592,7 @@ export default function Catalog() {
                     media3(screenWidth3);
 
                     function media4(width: number) {
-                        if (width >= 2560){
+                        if (width >= 768){
                             gsap.from('.pop-left',{
                                 scrollTrigger: {
                                     trigger: '.pop-img',
@@ -602,82 +602,6 @@ export default function Catalog() {
 
                                 },
                                 x: -1000,
-                                rotate: '0deg',
-                                y:0
-                            })
-                            gsap.from('.pop-right',{
-                                scrollTrigger: {
-                                    trigger: '.pop-img',
-                                    start: 'top center',
-                                    end: 'bottom bottom',
-                                    scrub: true
-
-                                },
-                                x: 1000,
-                                rotate: '0deg',
-                                y:0
-                            })
-                        } else if ( width >= 1920){
-                            gsap.from('.pop-left',{
-                                scrollTrigger: {
-                                    trigger: '.pop-img',
-                                    start: 'top center',
-                                    end: 'bottom bottom',
-                                    markers: true,
-                                    scrub: true
-
-                                },
-                                x: -1000,
-                                rotate: '0deg',
-                                y:0
-                            });
-                            gsap.from('.pop-right',{
-                                scrollTrigger: {
-                                    trigger: '.pop-img',
-                                    start: 'top center',
-                                    end: 'bottom bottom',
-                                    scrub: true
-
-                                },
-                                x: 1000,
-                                rotate: '0deg',
-                                y:0
-                            });
-                        } else if (width >= 1024){
-                            gsap.from('.pop-left',{
-                                scrollTrigger: {
-                                    trigger: '.pop-img',
-                                    start: 'top center',
-                                    end: 'bottom bottom',
-                                    scrub: true
-
-                                },
-                                x: -600,
-                                rotate: '0deg',
-                                y:0
-                            })
-                            gsap.from('.pop-right',{
-                                scrollTrigger: {
-                                    trigger: '.pop-img',
-                                    start: 'top center',
-                                    end: 'bottom bottom',
-                                    scrub: true
-
-                                },
-                                x: 600,
-                                rotate: '0deg',
-                                y:0
-                            })
-                        }else if (width >= 768){
-                            gsap.from('.pop-left',{
-                                scrollTrigger: {
-                                    trigger: '.pop-img',
-                                    start: 'top center',
-                                    end: 'bottom bottom',
-                                    scrub: true
-
-                                },
-                                x: -320,
                                 rotate: '0deg'
                             })
                             gsap.from('.pop-right',{
@@ -688,7 +612,7 @@ export default function Catalog() {
                                     scrub: true
 
                                 },
-                                x: 320,
+                                x: 1000,
                                 rotate: '0deg'
                             })
                         } else {
@@ -696,9 +620,8 @@ export default function Catalog() {
                                 scrollTrigger: {
                                     trigger: '.pop-img',
                                     start: 'top center',
-                                    end: 'bottom bottom',
+                                    end: 'bottom 90%',
                                     scrub: true
-
                                 },
                                 x: -300
                             })
@@ -706,9 +629,8 @@ export default function Catalog() {
                                 scrollTrigger: {
                                     trigger: '.pop-img',
                                     start: 'top center',
-                                    end: 'bottom bottom',
+                                    end: 'bottom 90%',
                                     scrub: true
-
                                 },
                                 x: 300
                             })
@@ -729,7 +651,7 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section relative bottom-[-1640px] h-[650vh] bg-[#ffc0cb] overflow-hidden">
+        <section className="catalog-section relative bottom-[-1640px] h-[600vh] bg-[#ffc0cb] overflow-hidden">
             <div className="catalog" ref={catRef}>
                 <div className="catalog-content">
                     <div className="catalog-head">
@@ -789,8 +711,8 @@ export default function Catalog() {
                             </div>
                             <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-3" src={wtrmBg} alt={""}></Image>
                         </div>
-                        <div className="product bg-white" id="product-4">
-                            <div className="pop-content relative h-[150vh]">
+                        <div className="product bg-white h-[135vh]" id="product-4">
+                            <div className="pop-content relative h-[130vh]">
                                 <div className="pop-head flex flex-col">
                                     <h2 className="pt-8 font-bulleto text-center text-[1.5em]">We Also Have</h2>
                                     <h1 className="pt-5 font-bulleto text-center mt-[-10px] text-5xl">Popsiclesss !!</h1>

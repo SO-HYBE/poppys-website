@@ -1,0 +1,42 @@
+.span-btn{
+  cursor: pointer;
+}
+
+@media (min-width: 768px){
+  #face2{
+    left:80%;
+  }
+  #face3{
+    left:50%;
+  }
+}
+@media (min-width: 1024px){
+  #face1{
+    left: 10%;
+  }
+  #face2{
+    left:80%;
+  }
+  #face3{
+    left:50%;
+    top: -360%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .span-btn{
+    font-size: 4em;
+  }
+  #face3{
+    top:-300%;
+  }
+}
+
+@media (min-width:2560px){
+  #face3{
+    top:-200%;
+  }
+  .span-btn{
+    font-size: 6em;
+  }
+}

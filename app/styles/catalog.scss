@@ -2,7 +2,7 @@
     height: 100vh;
 }
 #product-4{
-    height: 150vh;
+    height: 130vh;
     margin-top: 5vh;
 }
 .ov-img{
@@ -18,6 +18,15 @@
     .pop-right{
         width: 75%;
     }
+    .catalog-section{
+        height: 620vh;
+    }
+    .pop-content{
+        height: 140vh;
+    }
+    #product-4{
+        height: 140vh;
+    }
 }
 @media (min-width: 425px){
     .pop-left{
@@ -25,6 +34,15 @@
     }
     .pop-right{
         width: 70%;
+    }
+    .catalog-section{
+        height: 640vh;
+    }
+    .pop-content{
+        height: 160vh;
+    }
+    #product-4{
+        height: 160vh;
     }
 }
 
@@ -217,6 +235,23 @@
     }
 }
 @media (min-width: 2560px) {
+    .pop-left{
+        width: 50vh;
+        transform: rotate(30deg) translateX(60px);
+    }
+    .pop-right{
+        width: 50vh;
+        transform: rotate(-30deg) translateX(-60px);
+    }
+    .catalog-section{
+        height: 640vh;
+    }
+    .pop-content{
+        height: 160vh;
+    }
+    #product-4{
+        height: 160vh;
+    }
     .pop-head{
         h1{
             font-size: 6em;
