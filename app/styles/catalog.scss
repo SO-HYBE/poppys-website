@@ -234,6 +234,13 @@
         }
     }
 }
+
+@media (min-width: 1920px){
+    .catalog-section {
+        height: 637vh;
+    }
+}
+
 @media (min-width: 2560px) {
     .pop-left{
         width: 50vh;

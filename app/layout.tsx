@@ -6,6 +6,7 @@ import navbarStyle from './styles/navbar.scss'
 import aboutStyle from './styles/about.scss'
 import catalogStyle from './styles/catalog.scss'
 import merchStyle from './styles/merch.scss'
+import footerStyle from './styles/footer.scss'
 
 export const metadata: Metadata = {
   title: "Poppy's",
@@ -30,7 +31,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
         <meta name='keywords' content="Ice cream Icecream Poppy's food sweets cold"/>
       </Head>
-      <body suppressHydrationWarning={true} className={`${heroStyle.dashboard} ${navbarStyle.dashboard} ${aboutStyle.dashboard} ${catalogStyle} ${merchStyle}`}>{children}</body>
+      <body suppressHydrationWarning={true} className={`${heroStyle.dashboard} ${navbarStyle.dashboard} ${aboutStyle.dashboard} ${catalogStyle} ${merchStyle} ${footerStyle}`}>{children}</body>
     </html>
   )
 }

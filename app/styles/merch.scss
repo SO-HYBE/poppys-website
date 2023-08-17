@@ -2,7 +2,37 @@
   cursor: pointer;
 }
 
+@media (min-width:425px){
+  .merch-container{
+    height: 78vh;
+  }
+}
+@media (min-width:425px){
+  .merch-container{
+    height: 87vh;
+    h1{
+      margin-left: 10vh;
+    }
+    h2{
+      margin-left: 6vh;
+    }
+  }
+  .merch-section{
+    height: 115vh;
+  }
+}
+
 @media (min-width: 768px){
+  .merch-container{
+    height: 94vh;
+  }
+  .merch-section{
+    height: 122vh;
+  }
+  .merch-img{
+    margin-left: 30vh;
+    margin-right: 30vh;
+  }
   #face2{
     left:80%;
   }
@@ -11,6 +41,16 @@
   }
 }
 @media (min-width: 1024px){
+  .merch-container{
+    h1{
+      font-size: 2.8rem;
+      margin-left: 30vh;
+    }
+  }
+  .merch-img {
+    margin-left: 56.5vh;
+    margin-right: 56.5vh;
+  }
   #face1{
     left: 10%;
   }
@@ -24,6 +64,31 @@
 }
 
 @media (min-width: 1440px) {
+  .merch-section{
+    height: 128vh;
+  }
+  .merch-container{
+    height: 101vh;
+    div button{
+      padding: 10px;
+      font-size: large;
+    }
+    h1{
+      font-size: 3.5rem;
+      margin-left: 30vh;
+      margin-top: 3vh;
+    }
+    h2{
+      font-size: 2rem;
+      margin-left: 15vh; 
+      padding-top: 3vh
+    }
+  }
+  .merch-img {
+    margin-left: 76vh;
+    margin-right: 76vh;
+    margin-top: 4.5vh;
+}
   .span-btn{
     font-size: 4em;
   }
@@ -32,11 +97,57 @@
   }
 }
 
+@media (min-width: 1920px){
+  .merch-img {
+    margin-left: 47vh;
+    margin-right: 47vh;
+    margin-top: 4.5vh;
+  }
+  #face3 {
+    top: -150%;
+  }
+}
+
+
 @media (min-width:2560px){
+  .merch-container{
+    height: 101vh;
+    div button{
+      padding: 15px;
+      font-size: 2em;
+      border-radius: 15px;
+    }
+    h1{
+      font-size: 5rem;
+      margin-left: 52vh;
+      margin-top: 3vh;
+    }
+    h2{
+      font-size: 3rem;
+      margin-left: 25vh;
+      padding-top: 3vh;
+    }
+  }
+  .merch-img {
+    margin-left: 61vh;
+    margin-right: 61vh;
+    margin-top: 4.5vh;
+}
+.merch-section {
+  height: 124.5vh;
+}
   #face3{
     top:-200%;
   }
   .span-btn{
     font-size: 6em;
+  }
+}
+
+@media (min-width:2560px) and ( min-height:1875){
+  .merch-img {
+      margin-left: 14vh;
+      margin-right: 14vh;
+      margin-top: 4.5vh;
   }
 }
