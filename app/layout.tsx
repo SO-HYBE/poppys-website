@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html  lang="en">
       <Head>
-        <title>Poppy's Ice Cream</title>
+        <title>Poppy&apos;s Ice Cream</title>
         <link rel="preload" href="http://localhost:3000/_next/static/css/app/layout.css?v=1690558771863" as="style" />
       </Head>
       <Head>

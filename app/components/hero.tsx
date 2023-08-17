@@ -81,7 +81,7 @@ export default function Hero(){
             </div>
             <div className="rigth-cont flex flex-col basis-[50vh]">
               <div className="hero-p text-[.390em] pl-[6vw] pr-[1vw] w-[90vw] h-[70vh] mt-[3vh]">
-                <p className="text-move" id="details">Welcome to Poppy's, where nostalgia takes center stage and every scoop of ice cream is a ticket to cherished memories. We're not just an ice cream shop; we're a time-traveling adventure back to the carefree days of yesteryears.</p>
+                <p className="text-move" id="details">Welcome to Poppy&apos;s, where nostalgia takes center stage and every scoop of ice cream is a ticket to cherished memories. We&apos;re not just an ice cream shop; we&apos;re a time-traveling adventure back to the carefree days of yesteryears.</p>
                 <div className="h-fit main hidden w-fit">
                   <Image className="pict -rotate-45 mt-[5vh] ml-[3vw]" priority src={main} alt={""} style={{
           width: '70%',
@@ -119,19 +119,19 @@ export default function Hero(){
             </div>
             <div className="marquee-2">
             <div className="marquee__group-2 marquee__group">
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
 
             </div>
             <div className="marquee__group-2 marquee__group" aria-hidden="true">
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
-              <span>GET POPPY'S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
+              <span>GET POPPY&apos;S➺</span>
             </div>
             </div>
             <div className="marquee-3">

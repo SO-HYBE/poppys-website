@@ -686,7 +686,7 @@ export default function Catalog() {
                                         <h3 className="mt-[5vh] ml-[2vh] text-lg">Just Like Grandma Used To Make It</h3>
                                         <h1 className="text-center text-4xl" id="h1-p2">STRAWBERRY CHEESCAKE</h1>
                                     </div>
-                                        <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Imagine sunny days, holding Poppy's Strawberry Cheesecake Ice Cream, with laughter and joy all around. Creamy cheesecake-infused ice cream meets vibrant strawberry sweetness - a culinary masterpiece embodying our crafted love.</p>
+                                        <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Imagine sunny days, holding Poppy&apos;s Strawberry Cheesecake Ice Cream, with laughter and joy all around. Creamy cheesecake-infused ice cream meets vibrant strawberry sweetness - a culinary masterpiece embodying our crafted love.</p>
                                 </div>
                                 <div className="product-img absolute z-[4]" id="img-2">
                                     <Image className="ov-img absolute z-[10]" id="ov-2" src={strberries} alt={""}></Image>
@@ -702,7 +702,7 @@ export default function Catalog() {
                                         <h3 className="mt-[5vh] ml-[2vh] text-xl">The Taste Of Summer</h3>
                                         <h1 className="text-center text-4xl" id="h1-p2">WATERMELON CHUNKS</h1>
                                     </div>
-                                        <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Evoke the spirit of summer joy with our Watermelon Chunks Ice Cream. Authentic watermelon pieces meld seamlessly with creamy ice cream, creating a refreshing treat that embodies the season's essence in every delightful bite. Close your eyes, and taste the summer joy.</p>
+                                        <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Evoke the spirit of summer joy with our Watermelon Chunks Ice Cream. Authentic watermelon pieces meld seamlessly with creamy ice cream, creating a refreshing treat that embodies the season&apos;s essence in every delightful bite. Close your eyes, and taste the summer joy.</p>
                                 </div>
                                 <div className="product-img absolute z-[4]" id="img-3">
                                     <Image className="ov-img absolute z-[10]" id="ov-3" src={wtrmelons} alt={""}></Image>
