@@ -40,12 +40,12 @@ export default function Home() {
   // }
 
   return (
-    <main className={`${bulleto.variable} ${poppins.variable} font-sans`}>
-      <Navbar src={head} hov={hov}/>
-      <Hero/>
-      <About/>
-      <Catalog/>
-      <Merch/>
+    <main className={`${bulleto.variable} ${poppins.variable} font-sans z-10 absolute`}>
+      <Navbar src={head} hov={hov} />
+      <Hero />
+      <About />
+      <Catalog />
+      <Merch />
       <Footer/>
     </main>
   )

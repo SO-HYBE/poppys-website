@@ -1,0 +1,30 @@
+@media (min-width: 375px){
+    .footer-section{
+        bottom: -335vh;
+    }
+}
+
+@media (min-width: 1440px){
+    .footer-section{
+        bottom: -290vh;
+    }
+}
+@media (min-width: 1920px){
+    .footer-section{
+        bottom: -180vh;
+    }
+}
+@media (min-width: 2560px){
+    .footer-section{
+        bottom: -157vh;
+        p{
+            font-size: 2em;
+        }
+        ul{
+            font-size: 2em;
+        }
+        Image{
+            scale: 1.2;
+        }
+    }
+}

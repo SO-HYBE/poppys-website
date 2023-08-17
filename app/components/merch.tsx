@@ -1,12 +1,9 @@
-//font-size: clamp(10px,1.3333333333rem,300px);
 import Image from "next/image";
 import face from '../../public/face.png';
 import { gsap } from "gsap";
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
 import { useRef } from "react";
 import tee from '../../public/tee.png';
-import bag from '../../public/bag.png';
-
 
 export default function Merch (){
 
@@ -18,11 +15,11 @@ export default function Merch (){
                 gsap.killTweensOf('.face');
                 function media1(width: number) {
                     if(width >= 2560){
-                            gsap.to('.face', { visibility: 'visible', rotation:'360', repeat:-1, duration: 5, scale: 2, ease: "elastic.out(1.5, 0.2)"});
+                            gsap.to('.face', { visibility: 'visible', rotation:'360', repeat:-1, duration: 5, scale: 1.6, ease: "elastic.out(1.5, 0.2)"});
                     } else if(width >= 1024){
-                            gsap.to('.face', { visibility: 'visible', rotation:'360', repeat:-1, duration: 5, scale: 1.7, ease: "elastic.out(1.5, 0.2)"});
+                            gsap.to('.face', { visibility: 'visible', rotation:'360', repeat:-1, duration: 5, scale: 1.4, ease: "elastic.out(1.5, 0.2)"});
                     } else {
-                            gsap.to('.face', { visibility: 'visible', rotation:'360', repeat:-1, duration: 5, scale: 1.5, ease: "elastic.out(1.5, 0.2)"});
+                            gsap.to('.face', { visibility: 'visible', rotation:'360', repeat:-1, duration: 5, scale: 1.2, ease: "elastic.out(1.5, 0.2)"});
                     }
                 }
                 
@@ -49,7 +46,7 @@ export default function Merch (){
       }, []);
 
     return(
-        <section className="merch-section relative overflow-hidden top-[1630px]" ref={merchRef}>
+        <section className="merch-section relative overflow-hidden top-[1630px] bg-white" ref={merchRef}>
             <div className="btn-cont h-[20vh] bg-[#b80c09] my-10 mx-2 rounded-[20px] border-[5px] border-black">
                 <span className="span-btn flex justify-center items-center h-full font-bulleto text-2xl text-white">ORDER NOW</span>
                 <Image id="face1" className="face scale-[0.7] invisible left-4 top-[2em] relative" src={face} width={50} height={50} alt={""}></Image>
