@@ -63,7 +63,7 @@ export default function Footer (){
     <Image className='mt-3' src={black} alt='' width={100} height={100}></Image>
 
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">
-    &copy; 2023 Poppy&apos;s Ice Cream. All rights reserved. | Made with ❤️ by Sohybe Ibrahim
+    &copy; 2023 Poppy's Ice Cream. All rights reserved. | Made with ❤️ by Sohybe Ibrahim
     </p>
 
     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
