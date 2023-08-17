@@ -659,7 +659,7 @@ export default function Catalog() {
                             <h1 className="cat-head mt-[400px] text-3xl font-bulleto p-4 text-white 4 ">Explore our products!</h1>
                         </div>
                         <div className="catalog-img mt-10">
-                            <Image src={collection} alt={""}></Image>
+                            <Image src={collection} priority alt={""}></Image>
                         </div>  
                     </div>
                     <div className="catalog-products mt-[100px]">
@@ -673,11 +673,11 @@ export default function Catalog() {
                                         <p className="font-poppins relative mt-5 text-center text-sm mx-[4px] top-[42vh] text-white">Close your eyes, take a bite, and be transported. Picture flickering flames, the crackling of graham crackers, the sweetness of bananas blended with marshmallows, and laughter around the campfire. Now open your eyes; that magic is in every pint of our Banana Smores Ice Cream.</p>
                                 </div>
                                 <div className="product-img absolute z-[4]" id="img-1">
-                                    <Image className="ov-img absolute z-[10]" id="ov-1" src={bnnas} alt={""}></Image>
-                                    <Image className="image relative brightness-[.70]" src={banana} alt={""}></Image>
+                                    <Image className="ov-img absolute z-[10]" id="ov-1" src={bnnas} priority alt={""}></Image>
+                                    <Image className="image relative brightness-[.70]" src={banana} priority alt={""}></Image>
                                 </div>
                             </div>
-                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-1" src={bnnaBg} alt={""}></Image>
+                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-1" priority src={bnnaBg} alt={""}></Image>
                         </div>
                         <div className="product relative top-[6vh]" id="product-2">
                             <div className="product-content relative">   
@@ -689,11 +689,11 @@ export default function Catalog() {
                                         <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Imagine sunny days, holding Poppy's Strawberry Cheesecake Ice Cream, with laughter and joy all around. Creamy cheesecake-infused ice cream meets vibrant strawberry sweetness - a culinary masterpiece embodying our crafted love.</p>
                                 </div>
                                 <div className="product-img absolute z-[4]" id="img-2">
-                                    <Image className="ov-img absolute z-[10]" id="ov-2" src={strberries} alt={""}></Image>
-                                    <Image className="image relative brightness-[.70]" src={strberry} alt={""}></Image>
+                                    <Image className="ov-img absolute z-[10]" id="ov-2" src={strberries} priority alt={""}></Image>
+                                    <Image className="image relative brightness-[.70]" src={strberry} priority alt={""}></Image>
                                 </div>
                             </div>
-                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-2" src={strBg} alt={""}></Image>
+                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-2" priority src={strBg} alt={""}></Image>
                         </div>
                         <div className="product relative top-[6vh]" id="product-3">
                             <div className="product-content relative">   
@@ -705,11 +705,11 @@ export default function Catalog() {
                                         <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Evoke the spirit of summer joy with our Watermelon Chunks Ice Cream. Authentic watermelon pieces meld seamlessly with creamy ice cream, creating a refreshing treat that embodies the season's essence in every delightful bite. Close your eyes, and taste the summer joy.</p>
                                 </div>
                                 <div className="product-img absolute z-[4]" id="img-3">
-                                    <Image className="ov-img absolute z-[10]" id="ov-3" src={wtrmelons} alt={""}></Image>
-                                    <Image className="image relative brightness-[.70]" src={wtrmelon} alt={""}></Image>
+                                    <Image className="ov-img absolute z-[10]" id="ov-3" src={wtrmelons} priority alt={""}></Image>
+                                    <Image className="image relative brightness-[.70]" src={wtrmelon} priority alt={""}></Image>
                                 </div>
                             </div>
-                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-3" src={wtrmBg} alt={""}></Image>
+                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-3" priority src={wtrmBg} alt={""}></Image>
                         </div>
                         <div className="product bg-white h-[135vh]" id="product-4">
                             <div className="pop-content relative h-[130vh]">
@@ -718,8 +718,8 @@ export default function Catalog() {
                                     <h1 className="pt-5 font-bulleto text-center mt-[-10px] text-5xl">Popsiclesss !!</h1>
                                 </div>
                                 <div className="pop-img flex flex-row justify-around mx-10 mt-10">
-                                    <Image className="pop-left relative w-[80%] z-30" src={mngPop} alt={""}></Image>
-                                    <Image className="pop-right relative w-[80%] " src={strPop} alt={""}></Image>
+                                    <Image className="pop-left relative w-[80%] z-30" src={mngPop} priority alt={""}></Image>
+                                    <Image className="pop-right relative w-[80%] " src={strPop} priority alt={""}></Image>
                                 </div>
                             </div>
                         </div>

@@ -49,9 +49,9 @@ export default function Merch (){
         <section className="merch-section relative overflow-hidden top-[1630px] bg-white" ref={merchRef}>
             <div className="btn-cont h-[20vh] bg-[#b80c09] my-10 mx-2 rounded-[20px] border-[5px] border-black">
                 <span className="span-btn flex justify-center items-center h-full font-bulleto text-2xl text-white">ORDER NOW</span>
-                <Image id="face1" className="face scale-[0.7] invisible left-4 top-[2em] relative" src={face} width={50} height={50} alt={""}></Image>
-                <Image id="face2" className="face scale-[0.7] invisible left-[75%] top-[-50px] relative hue-rotate-90" src={face} width={50} height={50} alt={""}></Image>
-                <Image id="face3" className="face scale-[0.7] invisible left-[30%] relative top-[-250px] hue-rotate-[200deg]" src={face} width={50} height={50} alt={""}></Image>
+                <Image priority id="face1" className="face scale-[0.7] invisible left-4 top-[2em] relative" src={face} width={50} height={50} alt={""}></Image>
+                <Image priority id="face2" className="face scale-[0.7] invisible left-[75%] top-[-50px] relative hue-rotate-90" src={face} width={50} height={50} alt={""}></Image>
+                <Image priority id="face3" className="face scale-[0.7] invisible left-[30%] relative top-[-250px] hue-rotate-[200deg]" src={face} width={50} height={50} alt={""}></Image>
             </div>
             <div className="merch-container bg-[#ffc0cb] h-[72vh]">
                 <h2 className="ml-[3vh] text-xl font-bulleto">Liked our products?</h2>
@@ -61,7 +61,7 @@ export default function Merch (){
                         <button className="rounded bg-[#b80c09] mt-[3vh] p-[5px] text-white font-poppins">Learn More</button>
                     </div>
                     <div className="merch-img mt-[4vh]">
-                        <Image className="object-scale-down" src={tee} alt={""}></Image>
+                        <Image className="object-scale-down" src={tee} alt={""} priority></Image>
                     </div>
                 </div>
             </div>
