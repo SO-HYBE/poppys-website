@@ -35,9 +35,9 @@ export default function Home() {
     requestAnimationFrame(raf)
   },[])
 
-  // if (typeof window !== 'undefined') {
-  //  document.body.scrollTop = document.documentElement.scrollTop = 0;
-  // }
+   if (typeof window !== 'undefined') {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+   }
 
   return (
     <main className={`${bulleto.variable} ${poppins.variable} font-sans z-10 absolute`}>
