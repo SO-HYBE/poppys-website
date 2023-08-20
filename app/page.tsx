@@ -11,6 +11,8 @@ import Catalog from './components/catalog';
 import Merch from './components/merch';
 import Footer from './components/footer'
 import {Poppins} from 'next/font/google';
+import main from '../public/skate.png'
+import heroImg from '../public/hero-img.jpg'
 
 const bulleto = localFont({ src: './styles/BULLETTO-KILLA.ttf', variable: '--bulleto' })
 const poppins = Poppins({
@@ -35,14 +37,14 @@ export default function Home() {
     requestAnimationFrame(raf)
   },[])
 
-   if (typeof window !== 'undefined') {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-   }
+  //  if (typeof window !== 'undefined') {
+  //   document.body.scrollTop = document.documentElement.scrollTop = 0;
+  //  }
 
   return (
     <main className={`${bulleto.variable} ${poppins.variable} font-sans z-10 absolute`}>
       <Navbar src={head} hov={hov} />
-      <Hero />
+      <Hero main={main} hero={heroImg}/>
       <About />
       <Catalog />
       <Merch />

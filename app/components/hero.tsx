@@ -1,16 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger , CustomEase } from "gsap/all";
-import melt from '../../public/static/videos/melt.mp4';
 import Image, { StaticImageData } from "next/image";
-import main from '../../public/skate.png'
 import useIsomorphicLayoutEffect from 'use-isomorphic-layout-effect';
 import SplitType from "split-type";
 
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Hero(){
+export default function Hero(props:{main:StaticImageData, hero: StaticImageData}){
 
   //------------------ Hero content animation -----------------
     const ref  : any= useRef();
@@ -83,7 +81,7 @@ export default function Hero(){
               <div className="hero-p text-[.390em] pl-[6vw] pr-[1vw] w-[90vw] h-[70vh] mt-[3vh]">
                 <p className="text-move" id="details">Welcome to Poppy's, where nostalgia takes center stage and every scoop of ice cream is a ticket to cherished memories. We're not just an ice cream shop; we're a time-traveling adventure back to the carefree days of yesteryears.</p>
                 <div className="h-fit main hidden w-fit">
-                  <Image className="pict -rotate-45 mt-[5vh] ml-[3vw]" priority src={main} alt={""} style={{
+                  <Image className="pict -rotate-45 mt-[5vh] ml-[3vw]" priority src={props.main} alt={""} style={{
           width: '70%',
           objectFit: 'contain',
           height: 'auto',
@@ -94,10 +92,11 @@ export default function Hero(){
 
           </div>
           <div className="hero-bg-vid relative z-[-99] w-auto flex">
-            <video className="bg-vid h-[120vh] w-[100vw] object-cover justify-center" muted autoPlay loop>
+            {/* <video className="bg-vid h-[120vh] w-[100vw] object-cover justify-center" muted autoPlay loop>
               <source src={melt} type="video/mp4" />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
+            <Image className="bg-vid h-[120vh] w-[100vw] object-cover justify-center" src={props.hero} alt="main picture of poppy sliding into view"></Image>
           </div>
           <div className="marq h-[50vh]">
             <div className="marquee">

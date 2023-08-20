@@ -60,7 +60,7 @@ export default function Merch (){
                     <div className="flex justify-center">
                         <button className="rounded bg-[#b80c09] mt-[3vh] p-[5px] text-white font-poppins">Learn More</button>
                     </div>
-                    <div className="merch-img mt-[4vh]">
+                    <div className="merch-img mt-[5vh]">
                         <Image className="object-scale-down" src={tee} alt={""} priority></Image>
                     </div>
                 </div>

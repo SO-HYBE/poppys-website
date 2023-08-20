@@ -58,8 +58,8 @@ export default function Catalog() {
                         },
                         duration: 3,
                         ease: "circ.out",
-                        borderTopLeftRadius: '70% 35%',
-                        borderTopRightRadius: '70% 35%'
+                        borderTopLeftRadius: '90% 20%',
+                        borderTopRightRadius: '90% 20%'
                     });
                     //--------------------------- Function for responsiveness ---------------------------------//
 
@@ -656,7 +656,7 @@ export default function Catalog() {
                 <div className="catalog-content">
                     <div className="catalog-head">
                         <div className="head flex justify-center">
-                            <h1 className="cat-head mt-[400px] text-3xl font-bulleto p-4 text-white 4 ">Explore our products!</h1>
+                            <h1 className="cat-head mt-[300px] text-3xl font-bulleto p-4 text-white 4 ">Explore our products!</h1>
                         </div>
                         <div className="catalog-img mt-10">
                             <Image src={collection} priority alt={""}></Image>
