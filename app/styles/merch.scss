@@ -1,4 +1,4 @@
-.merch-container{
+.merch-section{
   box-shadow: 0 2rem 4rem #000
 }
 
@@ -64,6 +64,12 @@
   #face3{
     left:50%;
     top: -360%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .merch-section{
+    top: 1565px;
   }
 }
 

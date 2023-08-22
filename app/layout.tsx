@@ -26,6 +26,7 @@ export default function RootLayout({
         <link rel="preload" href="http://localhost:3000/_next/static/css/app/layout.css?v=1690558771863" as="style" />
       </Head>
       <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />

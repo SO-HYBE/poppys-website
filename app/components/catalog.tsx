@@ -36,8 +36,8 @@ export default function Catalog() {
                         gsap.from(catalog.chars, {
                             scrollTrigger: {
                                 trigger: '.catalog',
-                                start: '10% 60%',
-                                end: '40% 60%',
+                                start: 'top center',
+                                end: 'top center',
                                 scrub: false,                                
                                 toggleActions: 'play play restart restart'
                             },
@@ -51,8 +51,8 @@ export default function Catalog() {
                     gsap.to('.catalog-section', {
                         scrollTrigger: {
                             trigger: '.catalog',
-                            start: '-10% center',
-                            end: '-10% center',
+                            start: '-5% center',
+                            end: '-5% center',
                             scrub: false,
                             toggleActions: 'play play reverse reverse'
                         },
@@ -205,7 +205,7 @@ export default function Catalog() {
                             start: 'top 80%',
                             end: 'bottom 80%'
                         },
-                        y: 30,
+                        y: 60,
                         delay:0.3
                     }); 
                         }
@@ -381,7 +381,7 @@ export default function Catalog() {
                             start: 'top 70%',
                             end: 'bottom 70%'
                         },
-                        y: 70,
+                        y: 90,
                         delay:0.2
                     });
                     gsap.fromTo('#bg-2',{
@@ -569,11 +569,11 @@ export default function Catalog() {
                             start: 'top 70%',
                             end: 'bottom 70%'
                         },
-                        y: 70,
+                        y: 100,
                         delay:0.2
                     });
                     gsap.fromTo('#bg-3',{
-                        y:-30
+                        y:-80
                     },{
                         scrollTrigger: {
                             trigger: '#product-3',
@@ -581,7 +581,7 @@ export default function Catalog() {
                             start: 'top 80%',
                             end: 'bottom 80%'
                         },
-                        y: 3,
+                        y: 5,
                         delay:0.3
                     }); 
                         }
@@ -651,7 +651,7 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section relative bottom-[-1640px] h-[600vh] bg-[#ffc0cb] overflow-hidden">
+        <section className="catalog-section relative bottom-[-1150px] h-[500vh] bg-[#ffc0cb] overflow-hidden">
             <div className="catalog" ref={catRef}>
                 <div className="catalog-content">
                     <div className="catalog-head">
@@ -711,8 +711,8 @@ export default function Catalog() {
                             </div>
                             <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-3" priority src={wtrmBg} alt={""}></Image>
                         </div>
-                        <div className="product bg-white h-[135vh]" id="product-4">
-                            <div className="pop-content relative h-[130vh]">
+                        <div className="product bg-white h-[90vh]" id="product-4">
+                            <div className="pop-content relative h-[90vh]">
                                 <div className="pop-head flex flex-col">
                                     <h2 className="pt-8 font-bulleto text-center text-[1.5em]">We Also Have</h2>
                                     <h1 className="pt-5 font-bulleto text-center mt-[-10px] text-5xl">Popsiclesss !!</h1>

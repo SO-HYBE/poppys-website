@@ -58,8 +58,8 @@ export default function Footer (){
         
     }, []);
     return(
-<footer className="bg-[#b80c09] footer-section relative -z-10 bottom-[-330vh]" ref={footerRef}>
-  <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+<footer className="bg-[#b80c09] footer-section relative -z-10 bottom-[-138vh]" ref={footerRef}>
+  <div className="mx-auto max-w-5xl px-4 pb-10 pt-[5.5rem] sm:px-6 lg:px-8 footer-div">
     <Image className='mt-3' src={black} alt='' width={100} height={100}></Image>
 
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">

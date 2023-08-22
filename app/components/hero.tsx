@@ -92,11 +92,7 @@ export default function Hero(props:{main:StaticImageData, hero: StaticImageData}
 
           </div>
           <div className="hero-bg-vid relative z-[-99] w-auto flex">
-            {/* <video className="bg-vid h-[120vh] w-[100vw] object-cover justify-center" muted autoPlay loop>
-              <source src={melt} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> */}
-            <Image className="bg-vid h-[120vh] w-[100vw] object-cover justify-center" src={props.hero} alt="main picture of poppy sliding into view"></Image>
+            <Image priority className="bg-vid h-[120vh] w-[100vw] object-cover justify-center" src={props.hero} alt="main picture of poppy sliding into view"></Image>
           </div>
           <div className="marq h-[50vh]">
             <div className="marquee">
