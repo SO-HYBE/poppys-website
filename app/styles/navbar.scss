@@ -156,7 +156,15 @@ html {
     .md-dev {
         display: none;
     }
+
 }
+@media (min-width: 768px) {
+    .hero-head-img{
+        height: 5vh;
+    }
+}
+
+
 
 @media (min-width: 1024px) {
     .button{

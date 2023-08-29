@@ -33,6 +33,7 @@ export default function Hero(props:{main:StaticImageData, hero: StaticImageData}
           scrollTrigger: {
             trigger: '.hero',
             pin: true,
+            pinSpacing: "margin",
             scrub: 1,
             start: '10% start',
             end: '1800vw center'
@@ -68,7 +69,7 @@ export default function Hero(props:{main:StaticImageData, hero: StaticImageData}
 
     return (
 
-      <><section className="">
+      <><section className="hero-section">
         <div className="hero h-[115vh] overflow-hidden pb-[50vh]" ref={ref}>
           <div className="hero-content absolute z-10 top-[18vh] text-[2.3em] text-white h-[70vh]">
             <div className="span-container mt-[5vh] -ml-5 font-bulleto text-move">

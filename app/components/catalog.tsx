@@ -85,7 +85,7 @@ export default function Catalog() {
                                     start: 'top 50%',
                                     end: 'bottom 50%'
                                 },
-                                y: 70,
+                                y: 100,
                                 delay:0.2
                             });
                             gsap.fromTo('#ov-1',{
@@ -121,7 +121,7 @@ export default function Catalog() {
                                     start: 'top 50%',
                                     end: 'bottom 50%'
                                 },
-                                y: 35,
+                                y: 80,
                                 delay:0.2
                             });
                             gsap.fromTo('#ov-1',{
@@ -157,7 +157,7 @@ export default function Catalog() {
                                     start: 'top 50%',
                                     end: 'bottom 50%'
                                 },
-                                y: 30,
+                                y: 60,
                                 delay:0.2
                             });
                             gsap.fromTo('#ov-1',{
@@ -182,10 +182,10 @@ export default function Catalog() {
                             start: 'top 80%',
                             end: 'bottom 80%'
                         },
-                        y: 80
+                        y: 150
                     });
                     gsap.fromTo('#img-1',{
-                        y:-20
+                        y:0
                     },{
                         scrollTrigger: {
                             trigger: '#product-1',
@@ -193,7 +193,7 @@ export default function Catalog() {
                             start: 'top 70%',
                             end: 'bottom 70%'
                         },
-                        y: 120,
+                        y: 200,
                         delay:0.2
                     });
                     gsap.fromTo('#bg-1',{
@@ -205,7 +205,7 @@ export default function Catalog() {
                             start: 'top 80%',
                             end: 'bottom 80%'
                         },
-                        y: 60,
+                        y: 200,
                         delay:0.3
                     }); 
                         }
@@ -651,9 +651,9 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section relative bottom-[-1150px] h-[500vh] bg-[#ffc0cb] overflow-hidden">
-            <div className="catalog" ref={catRef}>
-                <div className="catalog-content">
+        <section className="catalog-section h-[500vh] bg-[#ffc0cb] overflow-hidden">
+            <div className="catalog h-[inherit]" ref={catRef}>
+                <div className="catalog-content h-[inherit]">
                     <div className="catalog-head">
                         <div className="head flex justify-center">
                             <h1 className="cat-head mt-[300px] text-3xl font-bulleto p-4 text-white 4 ">Explore our products!</h1>
@@ -662,7 +662,7 @@ export default function Catalog() {
                             <Image src={collection} priority alt={""}></Image>
                         </div>  
                     </div>
-                    <div className="catalog-products mt-[100px]">
+                    <div className="catalog-products mt-[100px] h-[inherit]">
                         <div className="product relative" id="product-1">
                             <div className="product-content relative">   
                                 <div className="product-txt absolute z-[5] ">
@@ -670,7 +670,7 @@ export default function Catalog() {
                                         <h3 className="mt-[5vh] ml-[2vh] text-xl">Taste The Campfire</h3>
                                         <h1 className="text-center text-4xl">BANANA SMORES</h1>
                                     </div>
-                                        <p className="font-poppins relative mt-5 text-center text-sm mx-[4px] top-[42vh] text-white">Close your eyes, take a bite, and be transported. Picture flickering flames, the crackling of graham crackers, the sweetness of bananas blended with marshmallows, and laughter around the campfire. Now open your eyes; that magic is in every pint of our Banana Smores Ice Cream.</p>
+                                        <p className="font-poppins relative mt-5 text-center text-sm mx-[4px] top-[50vh] text-white">Close your eyes, take a bite, and be transported. Picture flickering flames, the crackling of graham crackers, the sweetness of bananas blended with marshmallows, and laughter around the campfire. Now open your eyes; that magic is in every pint of our Banana Smores Ice Cream.</p>
                                 </div>
                                 <div className="product-img absolute z-[4]" id="img-1">
                                     <Image className="ov-img absolute z-[10]" id="ov-1" src={bnnas} priority alt={""}></Image>
@@ -711,8 +711,8 @@ export default function Catalog() {
                             </div>
                             <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-3" priority src={wtrmBg} alt={""}></Image>
                         </div>
-                        <div className="product bg-white h-[90vh]" id="product-4">
-                            <div className="pop-content relative h-[90vh]">
+                        <div className="product bg-white h-[inherit]" id="product-4">
+                            <div className="pop-content relative">
                                 <div className="pop-head flex flex-col">
                                     <h2 className="pt-8 font-bulleto text-center text-[1.5em]">We Also Have</h2>
                                     <h1 className="pt-5 font-bulleto text-center mt-[-10px] text-5xl">Popsiclesss !!</h1>

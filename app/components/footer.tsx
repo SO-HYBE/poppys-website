@@ -33,9 +33,9 @@ export default function Footer (){
                     ScrollTrigger.create({  
                         trigger: '.merch-section',
                         start: 'bottom bottom',
-                        end: '+=375vh',
+                        end: '+=423vh',
                         animation: uncover,
-                        scrub: true 
+                        scrub: true
                       })
                 }
             }
@@ -46,8 +46,8 @@ export default function Footer (){
             gsap.to('.merch-section', {
                 scrollTrigger:{
                     trigger: '.merch-img',
-                    start:'center 80%',
-                    end: 'bottom 80%',
+                    start:'top 60%',
+                    end: 'bottom 60%',
                     scrub: true
                 },
                 borderBottomLeftRadius:'40px',
