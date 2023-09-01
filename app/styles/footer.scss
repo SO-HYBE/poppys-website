@@ -1,17 +1,11 @@
-@media (min-width: 375px){
-    .footer-section{
-        bottom: -335vh;
+@media (min-width: 425px){
+    .footer-div{
+        padding-bottom: 6.5rem;
     }
 }
 
-@media (min-width: 1440px){
-    .footer-section{
-        bottom: -290vh;
-    }
-}
 @media (min-width: 1920px){
     .footer-section{
-        bottom: -168vh;
     .footer-div{
         padding-top: 3.5rem;
     }
@@ -19,7 +13,6 @@
 }
 @media (min-width: 2560px){
     .footer-section{
-        bottom: -157vh;
         p{
             font-size: 2em;
         }

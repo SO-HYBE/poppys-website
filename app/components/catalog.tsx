@@ -651,7 +651,7 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section h-[500vh] bg-[#ffc0cb] overflow-hidden">
+        <section className="catalog-section h-[240rem] bg-[#ffc0cb] overflow-hidden">
             <div className="catalog h-[inherit]" ref={catRef}>
                 <div className="catalog-content h-[inherit]">
                     <div className="catalog-head">

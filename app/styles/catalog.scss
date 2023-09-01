@@ -2,7 +2,7 @@
     height: 100vh;
 }
 #product-4{
-    height: 90vh;
+    height: 60rem;
     margin-top: 5vh;
 }
 .ov-img{
@@ -26,9 +26,24 @@
     .pop-right{
         width: 70%;
     }
+    .catalog-section{
+        height: 250rem;
+    }
+}
+
+@media (min-width: 576px){
+    .catalog-section{
+        height: 270rem;
+    }
+    #product-4{
+        height: 70rem;
+    }
 }
 
 @media (min-width: 768px) {
+    .catalog-section{
+        height: 275rem;
+    }
     .pop-left{
         width: 40vh;
         transform: rotate(25deg);
@@ -80,7 +95,16 @@
         }
     }
 }
+@media (min-width: 992px) {
+    .catalog-section{
+        height: 285rem;
+    }
+}
+
 @media (min-width: 1024px) {
+    .catalog-section{
+        height: 285rem;
+    }
     .pop-head{
         h2{
             font-size: 1.5em;
@@ -137,7 +161,18 @@
         }
     }
 }
+@media (min-width: 1200px) {
+    .catalog-section{
+        height: 294rem;
+    }
+}
 @media (min-width: 1440px) {
+    .catalog-section{
+        height: 305rem;
+    }
+    #product-4{
+        height: 75rem;
+    }
     .pop-left{
         width: 50vh;
         transform: rotate(30deg) translateX(40px);

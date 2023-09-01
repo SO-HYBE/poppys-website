@@ -46,7 +46,7 @@ export default function Merch (){
       }, []);
 
     return(
-        <section className="merch-section h-[82vh] relative overflow-hidden top-[1080px] bg-white" ref={merchRef}>
+        <section className="merch-section h-[82vh] relative overflow-hidden bg-white" ref={merchRef}>
             <div className="btn-cont h-[20vh] bg-[#b80c09] my-10 mx-2 rounded-[20px] border-[5px] border-black">
                 <span className="span-btn flex justify-center items-center h-full font-bulleto text-2xl text-white">ORDER NOW</span>
                 <Image priority id="face1" className="face scale-[0.7] invisible left-4 top-[2em] relative" src={face} width={50} height={50} alt={""}></Image>

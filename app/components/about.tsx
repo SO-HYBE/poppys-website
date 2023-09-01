@@ -98,8 +98,8 @@ export default function About(){
     return(
         <section className="about-section h-[100vh] mp-[200px] snap-mandatory snap-x ">
             <div className="about bg-white flex flex-col snap-start" ref={aboutRef}>
-                <h1 className="about-head flex justify-center font-bulleto text-5xl pt-[100px] pb-[120px] bg-[#ffc0cb] relative">About Us</h1>
-                <div className="about-content flex flex-col-reverse mt-[10rem] absolute">
+                <h1 className="about-head flex justify-center font-bulleto text-5xl pt-[180px] pb-[120px] bg-[#ffc0cb]">About Us</h1>
+                <div className="about-content flex flex-col-reverse mt-[10rem]">
                     <p className="about-p mx-5 justify-center leading-relaxed font-bold mt-5">
                         Welcome to Poppy's, a haven where nostalgia reigns supreme and every ice cream scoop becomes a portal to cherished memories. Beyond being a mere ice cream shop, we offer a voyage back in time to the days of carefree innocence. Our flavors encapsulate the essence of joy, aimed at forging connections and weaving new moments with every delightful bite. Join us in this captivating escapade where the past seamlessly merges with the present, resulting in a medley of frozen delights and heartfelt instances.
                     </p>

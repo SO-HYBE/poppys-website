@@ -30,7 +30,14 @@
     }
   }
   .merch-section{
-    height: 115vh;
+    height: 87vh;
+  }
+}
+
+@media (min-width: 576px){
+  .merch-img{
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 }
 
@@ -42,8 +49,8 @@
     height: 122vh;
   }
   .merch-img{
-    margin-left: 30vh;
-    margin-right: 30vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
   }
   #face2{
     left:80%;
@@ -60,8 +67,8 @@
     }
   }
   .merch-img {
-    margin-left: 56.5vh;
-    margin-right: 56.5vh;
+    margin-left: 12vh;
+    margin-right: 12vh;
   }
   #face1{
     left: 10%;
@@ -103,8 +110,8 @@
     }
   }
   .merch-img {
-    margin-left: 76vh;
-    margin-right: 76vh;
+    margin-left: 19rem;
+    margin-right: 19rem;
     margin-top: 4.5vh;
 }
   .span-btn{
