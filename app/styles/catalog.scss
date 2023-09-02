@@ -166,12 +166,19 @@
         height: 294rem;
     }
 }
+
+@media (min-width: 1200px) and (min-height: 570px){
+    .catalog-section {
+        height: 244rem;
+    }
+}
+
 @media (min-width: 1440px) {
     .catalog-section{
         height: 305rem;
     }
     #product-4{
-        height: 75rem;
+        height: 100rem;
     }
     .pop-left{
         width: 50vh;
@@ -246,6 +253,17 @@
     }
 }
 
+@media (min-width: 1920px) {
+    .catalog-section{
+        height:320vh;
+    }
+}
+
+@media (min-width: 1440px) and (min-height: 900px) {
+    .catalog-section{
+        height: 355rem;
+    }
+}
 @media (min-width: 2560px) {
     .pop-left{
         width: 50vh;

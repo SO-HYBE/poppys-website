@@ -2,19 +2,18 @@
     .about-head{
         padding-bottom: 140px;
     }
+    .about-section{
+        height: 140vh;
+    }
 }
 
 @media (min-width: 768px) {
-    .about-head{
-        padding-bottom: 265px;
-    }
     .about-image{
         margin-right: 5vw;
         margin-left: 5vw;
-        margin-top: 3vh;
     }
     .about-section{
-        height: 130vh;
+        height: 160vh;
     }
     .about-p{
         margin-right: 5vw; 
@@ -22,28 +21,17 @@
     }
 }
 @media (min-width: 1024px) {
-    .about-head{
-        padding-bottom: 280px;
-    }
     .about-image{
         margin-right: 10vw;
         margin-left: 10vw;
-        margin-top: 3vh;
-        top: 20%;
     }
     .about-section{
-        height: 140vh;
+        height: 240vh;
     }
     .about-p{
         font-size: 1.15em;
         margin-left: 10vw; 
         margin-right: 10vw; 
-    }
-}
-
-@media (min-width: 1240px) {
-    .about-p{
-        top: 37vw;
     }
 }
 
@@ -55,7 +43,6 @@
         margin-right: 15vw;
         margin-left: 15vw;
         margin-top: -23vh;
-        top: 30%;
     }
     .about-section{
         height: 180vh;
@@ -69,20 +56,15 @@
 
 @media (min-width: 1920px) {
     .about-p{
-        top: 20vw;
         margin-right: 20vw;
         margin-left: 20vw;
     }
     .about-section{
-        height: 130vh;
+        height: 220vh;
     }
     .about-image{
-        margin-top: -16vh;
         margin-right: 20vw;
         margin-left: 20vw;
-    }
-    .about-head{
-        padding-bottom: 440px;
     }
 }
 @media (min-width: 2560px) {

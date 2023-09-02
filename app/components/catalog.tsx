@@ -620,8 +620,9 @@ export default function Catalog() {
                                 scrollTrigger: {
                                     trigger: '.pop-img',
                                     start: 'top center',
-                                    end: 'bottom 90%',
-                                    scrub: true
+                                    end: 'bottom 60%',
+                                    scrub: true,
+                                    markers:true
                                 },
                                 x: -300
                             })
@@ -629,7 +630,7 @@ export default function Catalog() {
                                 scrollTrigger: {
                                     trigger: '.pop-img',
                                     start: 'top center',
-                                    end: 'bottom 90%',
+                                    end: 'bottom 60%',
                                     scrub: true
                                 },
                                 x: 300
