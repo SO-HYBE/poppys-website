@@ -621,8 +621,7 @@ export default function Catalog() {
                                     trigger: '.pop-img',
                                     start: 'top center',
                                     end: 'bottom 60%',
-                                    scrub: true,
-                                    markers:true
+                                    scrub: true
                                 },
                                 x: -300
                             })
