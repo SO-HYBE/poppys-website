@@ -60,7 +60,11 @@ export default function Merch (){
                 </div>
                 <div className="flex flex-col">
                     <div className="flex justify-center">
-                        <button className="rounded bg-[#b80c09] mt-[3vh] p-[5px] text-white font-poppins">Learn More</button>
+                    <a href="#_" className="relative inline-block px-4 py-2 font-medium group">
+                        <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                        <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                        <span className="relative text-black group-hover:text-white">Learn More!</span>
+                    </a>
                     </div>
                     <div className="merch-img mt-[5vh]">
                         <Image className="object-scale-down" src={tee} alt={""} priority></Image>
