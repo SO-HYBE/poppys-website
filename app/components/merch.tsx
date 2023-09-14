@@ -1,11 +1,59 @@
+'use client'
 import Image from "next/image";
 import face from '../../public/face.png';
 import { gsap } from "gsap";
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import tee from '../../public/tee.png';
 
 export default function Merch (){
+
+     //------------ Button animtion -----------------
+     useEffect(()=> {
+  
+        document.querySelectorAll('.button-merch').forEach(button => {
+    
+        let div = document.createElement('div'),
+            letters = (button.textContent as String).trim().split('');
+    
+        function elements(letter:string , index:number, array:Array<string>) {
+    
+            let element = document.createElement('span'),
+                part = (index >= array.length / 2) ? -1 : 1,
+                position = (index >= array.length / 2) ? array.length / 2 - index + (array.length / 2 - 1) : index,
+                move = position / (array.length / 2),
+                rotate = 1 - move;
+    
+            element.innerHTML = !letter.trim() ? '&nbsp;' : letter;
+            element.style.setProperty('--move', move as any);
+            element.style.setProperty('--rotate', rotate as any);
+            element.style.setProperty('--part', part as any);
+    
+            div.appendChild(element);
+    
+        }
+    
+        letters.forEach(elements);
+    
+        button.innerHTML = div.outerHTML;
+    
+        button.addEventListener('mouseenter', e => {
+            if(!button.classList.contains('out')) {
+                button.classList.add('in');
+            }
+        });
+    
+        button.addEventListener('mouseleave', e => {
+            if(button.classList.contains('in')) {
+                button.classList.add('out');
+                setTimeout(() => button.classList.remove('in', 'out'), 950);
+            }
+        });
+    
+        });
+      
+      },[])
+  
 
     const merchRef : any = useRef();
     const merchCtx = gsap.context(merchRef);
@@ -46,28 +94,24 @@ export default function Merch (){
       }, []);
 
     return(
-        <section className="merch-section h-[82vh] relative overflow-hidden bg-white" ref={merchRef}>
-            <div className="btn-cont h-[20vh] bg-[#b80c09] my-10 mx-2 rounded-[20px] border-[5px] border-black">
+        <section className="merch-section h-[72vh] relative overflow-hidden bg-white" ref={merchRef}>
+            <div className="btn-cont h-[10vh] bg-[#b80c09] my-10 mx-5 rounded-[20px]">
                 <span className="span-btn flex justify-center items-center h-full font-bulleto text-2xl text-white">ORDER NOW</span>
                 <Image priority id="face1" className="face scale-[0.7] invisible left-4 top-[2em] relative" src={face} width={50} height={50} alt={""}></Image>
                 <Image priority id="face2" className="face scale-[0.7] invisible left-[75%] top-[-50px] relative hue-rotate-90" src={face} width={50} height={50} alt={""}></Image>
-                <Image priority id="face3" className="face scale-[0.7] invisible left-[30%] relative top-[-250px] hue-rotate-[200deg]" src={face} width={50} height={50} alt={""}></Image>
+                <Image priority id="face3" className="face scale-[0.7] invisible left-[30%] relative top-[-220px] hue-rotate-[200deg]" src={face} width={50} height={50} alt={""}></Image>
             </div>
-            <div className="merch-container bg-[#ffc0cb]">
-                <div className="merc-text mt-[1.5rem] pt-3">
-                    <h2 className="ml-[3vh] text-xl font-bulleto">Liked our products?</h2>
-                    <h1 className="ml-[5vh] text-4xl font-bulleto">Buy our merch!</h1>
+            <div className="merch-container bg-[#ffc0cb] h-full">
+                <div className="merc-text mt-[1.5rem] pt-[1.75rem]">
+                    <h2 className="ml-[4vw] text-xl font-bulleto">Liked our products?</h2>
+                    <h1 className="text-center text-4xl font-bulleto mb-12">Buy our merch!</h1>
                 </div>
                 <div className="flex flex-col">
                     <div className="flex justify-center">
-                    <a href="#_" className="relative inline-block px-4 py-2 font-medium group">
-                        <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                        <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-                        <span className="relative text-black group-hover:text-white">Learn More!</span>
-                    </a>
+                    <button className="button-merch alternative font-poppins">Learn More!</button>
                     </div>
-                    <div className="merch-img mt-[5vh]">
-                        <Image className="object-scale-down" src={tee} alt={""} priority></Image>
+                    <div className="merch-img mt-[6vh] relative">
+                        <Image className="object-scale-down absolute" src={tee} alt={""} priority></Image>
                     </div>
                 </div>
             </div>

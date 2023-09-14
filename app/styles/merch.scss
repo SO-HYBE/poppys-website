@@ -8,29 +8,18 @@
 
 @media (min-width:375px){
   .merch-section{
-    top: 0;
+    height: 78vh;
   }
   .merch-img{
     margin-top: 6vh;
   }
 }
 @media (min-width:425px){
-  .merch-container{
-    height: 78vh;
-  }
-}
-@media (min-width:425px){
-  .merch-container{
-    height: 87vh;
-    h1{
-      margin-left: 10vh;
-    }
-    h2{
-      margin-left: 6vh;
-    }
-  }
   .merch-section{
     height: 87vh;
+  }
+  .merch-img{
+    margin-top: 9vh;
   }
 }
 
@@ -42,11 +31,8 @@
 }
 
 @media (min-width: 768px){
-  .merch-container{
-    height: 94vh;
-  }
   .merch-section{
-    height: 122vh;
+    height: 105vw;
   }
   .merch-img{
     margin-left: 10vh;
@@ -57,18 +43,22 @@
   }
   #face3{
     left:50%;
+    top: -200px;
   }
 }
 @media (min-width: 1024px){
   .merch-container{
     h1{
       font-size: 2.8rem;
-      margin-left: 30vh;
     }
   }
   .merch-img {
     margin-left: 12vh;
     margin-right: 12vh;
+  }
+  .button-merch{
+    margin-top: 5vw;
+    margin-bottom: 10vw;
   }
   #face1{
     left: 10%;
@@ -77,30 +67,49 @@
     left:80%;
   }
   #face3{
-    left:50%;
-    top: -360%;
+    left:30%;
+    top: -200px;
+  }
+}
+
+@media (min-width: 1200px){
+  .merch-container{
+    h1{
+      font-size: 2.8rem;
+    }
+    h2{
+      font-size: 1.7rem;
+    }
+  }
+  .merch-section{
+    height: 85vw;
+  }
+  .merch-img {
+    margin-left: 17vh;
+    margin-right: 17vh;
+  }
+  .button-merch{
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 
 @media (min-width: 1440px) {
   .merch-section{
-    height: 128vh;
+    height: 67vw;
   }
   .merch-container{
-    height: 101vh;
     div button{
       padding: 10px;
       font-size: large;
     }
     h1{
       font-size: 3.5rem;
-      margin-left: 30vh;
       margin-top: 3vh;
     }
     h2{
       font-size: 2rem;
-      margin-left: 15vh; 
       padding-top: 3vh
     }
   }
@@ -113,7 +122,7 @@
     font-size: 4em;
   }
   #face3{
-    top:-300%;
+    top:-200px;
   }
 }
 
@@ -126,12 +135,14 @@
   #face3 {
     top: -150%;
   }
+  .merch-section{
+    height: 60vw;
+  }
 }
 
 
 @media (min-width:2560px){
   .merch-container{
-    height: 101vh;
     div button{
       padding: 15px;
       font-size: 2em;
@@ -139,12 +150,10 @@
     }
     h1{
       font-size: 5rem;
-      margin-left: 52vh;
       margin-top: 3vh;
     }
     h2{
       font-size: 3rem;
-      margin-left: 25vh;
       padding-top: 3vh;
     }
   }
@@ -154,7 +163,7 @@
     margin-top: 4.5vh;
 }
 .merch-section {
-  height: 124.5vh;
+  height: 48vw;
 }
   #face3{
     top:-200%;
@@ -170,4 +179,127 @@
       margin-right: 14vh;
       margin-top: 4.5vh;
   }
+}
+
+
+
+
+/*nav bar buttons animation*/
+
+.button-merch {
+  &.alternative {
+      --color-hover: #8a0200;
+      --background: #b80c09;
+      --hover-back: #be4341;
+      --hover-front: #F6F8FF;
+  }
+}
+
+.button-merch {
+  --color: #fff;
+  --color-hover: var(--color);
+  --background: #2B3044;
+  --background-hover: var(--background);
+  --hover-back: #b80c09;
+  --hover-front: #5C86FF;
+  padding: 1vh 2vh;
+  border-radius: 10px;
+  line-height: 24px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  color: var(--c, var(--color));
+  background: var(--b, var(--background));
+  transition: color .2s linear var(--c-d, .2s), background .3s linear var(--b-d, .2s);
+  &:not(.simple) {
+      &:before,
+      &:after {
+          content: '';
+          position: absolute;
+          background: var(--pb, var(--hover-back));
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 200%;
+          border-radius: var(--br, 40%);
+          transform: translateY(var(--y, 50%));
+          transition: transform var(--d, .4s) ease-in var(--d-d, 0s), border-radius .5s ease var(--br-d, .08s);
+
+      }
+      &:after {
+          --pb: var(--hover-front);
+          --d: .44s;
+      }
+  }
+  div {
+      z-index: 1;
+      position: relative;
+      display: flex;
+      span {
+          display: block;
+          backface-visibility: hidden;
+          transform: translateZ(0);
+          animation: var(--name, none) .7s linear forwards .18s;
+      }
+  }
+  &.in {
+      --name: move;
+      &:not(.out) {
+          --c: var(--color-hover);
+          --b: var(--background-hover);
+          &:before,
+          &:after {
+              --y: 0;
+              --br: 5%;
+          }
+          &:after {
+              --br: 10%;
+              --d-d: .02s;
+          }
+      }
+      &.out {
+          --name: move-out;
+          &:before {
+              --d-d: .06s;
+          }
+      }
+  }
+}
+
+@keyframes move {
+  30%,
+  36% {
+      transform: translateY(calc(-6px * var(--move))) translateZ(0) rotate(calc(-13deg * var(--rotate) * var(--part)));
+  }
+  50% {
+      transform: translateY(calc(3px * var(--move))) translateZ(0) rotate(calc(6deg * var(--rotate) * var(--part)));
+  }
+  70% {
+      transform: translateY(calc(-2px * var(--move))) translateZ(0) rotate(calc(-3deg * var(--rotate) * var(--part)));
+  }
+}
+
+@keyframes move-out {
+  30%,
+  36% {
+      transform: translateY(calc(6px * var(--move))) translateZ(0) rotate(calc(13deg * var(--rotate) * var(--part)));
+  }
+  50% {
+      transform: translateY(calc(-3px * var(--move))) translateZ(0) rotate(calc(-6deg * var(--rotate) * var(--part)));
+  }
+  70% {
+      transform: translateY(calc(2px * var(--move))) translateZ(0) rotate(calc(3deg * var(--rotate) * var(--part)));
+  }
+}
+
+#list-image {
+  display: none;
 }

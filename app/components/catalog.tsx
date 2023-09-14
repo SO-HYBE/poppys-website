@@ -1,19 +1,16 @@
+'use client'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
 import SplitType from "split-type";
 import Image from "next/image";
-import collection from '../../public/collection.png';
 import bnnaBg from '../../public/bnna-bg.jpg';
 import banana from '../../public/banana-sm.png';
-import bnnas from '../../public/banana-collection.png';
 import strBg from '../../public/stwb-bg.jpg';
 import strberry from '../../public/st-cheese.png';
-import strberries from '../../public/strawberry-collection.png';
 import wtrmBg from '../../public/wtrm-bg.jpg';
 import wtrmelon from '../../public/wt-ch-cream.png';
-import wtrmelons from '../../public/w-collection.png';
 import strPop from '../../public/str-pop.png';
 import mngPop from '../../public/mng-pop.png';
 
@@ -38,8 +35,8 @@ export default function Catalog() {
                                 trigger: '.catalog',
                                 start: 'top center',
                                 end: 'top center',
-                                scrub: false,                                
-                                toggleActions: 'play play restart restart'
+                                scrub: false
+
                             },
                             scaleY: 0,
                             y: 20,
@@ -48,548 +45,182 @@ export default function Catalog() {
                             duration: 0.1
                         }) 
                     });
-                    gsap.to('.catalog-section', {
+
+                    //--------------------------- products animation ---------------------------------//
+                    const product1 = document.getElementById('product-1');
+                    const product2 = document.getElementById('product-2');
+                    const product3 = document.getElementById('product-3');
+                    
+
+                    const hoverAnimation1 = gsap.to('.p1-bg', {
+                      scale: 1.2, // Scale the div to 120% on hover
+                      visibility: 'visisble',
+                      autoAlpha:1,
+                      paused: true, // Start the animation as paused
+                    });
+                    
+                    const hoverAnimation2 = gsap.to('.p2-bg', {
+                      scale: 1.2, // Scale the div to 120% on hover
+                      visibility: 'visisble',
+                      autoAlpha:1,
+                      paused: true, // Start the animation as paused
+                    });
+                    
+                    const hoverAnimation3= gsap.to('.p3-bg', {
+                      scale: 1.2, // Scale the div to 120% on hover
+                      visibility: 'visisble',
+                      autoAlpha:1,
+                      paused: true, // Start the animation as paused
+                    });
+                    
+                    // Add a hover event listener to trigger the animation
+                    (product1 as Element).addEventListener('mouseenter', () => {
+                      hoverAnimation1.play(); // Play the animation on hover
+                    });
+                    
+                    (product1 as Element).addEventListener('mouseleave', () => {
+                      hoverAnimation1.reverse(); // Reverse the animation on mouse leave
+                    });
+                    // Add a hover event listener to trigger the animation
+                    (product2 as Element).addEventListener('mouseenter', () => {
+                      hoverAnimation2.play(); // Play the animation on hover
+                    });
+                    
+                    (product2 as Element).addEventListener('mouseleave', () => {
+                      hoverAnimation2.reverse(); // Reverse the animation on mouse leave
+                    });
+                    // Add a hover event listener to trigger the animation
+                    (product3 as Element).addEventListener('mouseenter', () => {
+                      hoverAnimation3.play(); // Play the animation on hover
+                    });
+                    
+                    (product3 as Element).addEventListener('mouseleave', () => {
+                      hoverAnimation3.reverse(); // Reverse the animation on mouse leave
+                    });
+
+
+                    const anim1 = gsap.to('.p1-img', {
+                      scaleX: '0.7',
+                      scaleY: '0.7',
+                      paused: true
+                    });
+                    const anim2 = gsap.to('.p2-img', {
+                      scaleX: '0.7',
+                      scaleY: '0.7',
+                      paused: true
+                    });
+                    const anim3 = gsap.to('.p3-img', {
+                      scaleX: '0.7',
+                      scaleY: '0.7',
+                      paused: true
+                    });
+                    
+                    // Add a hover event listener to trigger the animation
+                    (product1 as Element).addEventListener('mouseenter', () => {
+                      anim1.play(); // Play the animation on hover
+                    });
+                    
+                    (product1 as Element).addEventListener('mouseleave', () => {
+                      anim1.reverse(); // Reverse the animation on mouse leave
+                    });
+                    // Add a hover event listener to trigger the animation
+                    (product2 as Element).addEventListener('mouseenter', () => {
+                      anim2.play(); // Play the animation on hover
+                    });
+                    
+                    (product2 as Element).addEventListener('mouseleave', () => {
+                      anim2.reverse(); // Reverse the animation on mouse leave
+                    });
+                    // Add a hover event listener to trigger the animation
+                    (product3 as Element).addEventListener('mouseenter', () => {
+                      anim3.play(); // Play the animation on hover
+                    });
+                    
+                    (product3 as Element).addEventListener('mouseleave', () => {
+                      anim3.reverse(); // Reverse the animation on mouse leave
+                    });
+
+                    gsap.from('.products1-3 a', {
                         scrollTrigger: {
                             trigger: '.catalog',
-                            start: '-5% center',
-                            end: '-5% center',
+                            start: 'top 70%',
+                            end: 'top 70%',
+                            scrub: false
+                        },
+                        y: 50,
+                        duration: 1.5,
+                        visibility: 'invisible',
+                        autoAlpha: 0,
+                        stagger: 0.65
+                    })
+
+                    gsap.to('.catalog', {
+                        scrollTrigger: { 
+                            trigger: '.catalog',
+                            start: 'top 60%',
+                            end: 'top 60%',
                             scrub: false,
                             toggleActions: 'play play reverse reverse'
                         },
-                        duration: 3,
-                        ease: "circ.out",
-                        borderTopLeftRadius: '90% 20%',
-                        borderTopRightRadius: '90% 20%'
-                    });
+                        backgroundColor: '#ffc0cb'
+                    })
+
+                    gsap.to('.cat-head', {
+                        scrollTrigger: { 
+                            trigger: '.catalog',
+                            start: 'top 60%',
+                            end: 'top 60%',
+                            scrub: false,
+                            toggleActions: 'play play reverse reverse'
+                        },
+                        color: 'white'
+                    })
+
+                    gsap.to('#product-4', {
+                        scrollTrigger: { 
+                            trigger: '#product-4',
+                            start: 'top 60%',
+                            end: 'top 60%',
+                            scrub: false,
+                            toggleActions: 'play play reverse reverse'
+                        },
+                        backgroundColor: 'white'
+                    })
+
+                    gsap.to('.p4-head ', {
+                        scrollTrigger: { 
+                            trigger: '.p4-head',
+                            start: 'top 60%',
+                            end: 'top 60%',
+                            scrub: false,
+                            toggleActions: 'play play reverse reverse'
+                        },
+                        color: 'black'
+                    })
+
                     //--------------------------- Function for responsiveness ---------------------------------//
-
-                    function media1(width: number) {
-                        if (width >= 2560){
-                            gsap.fromTo('#head-1',{
-                                y:-50
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 100
-                            });
-                            gsap.fromTo('#bg-1',{
-                                y:-70
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 100,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-1',{
-                                y:-100
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 85,
-                                delay:0.3
-                            });
-                        } else if ( width >= 1920){
-                            gsap.fromTo('#head-1',{
-                                y:-60
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 80
-                            });
-                            gsap.fromTo('#bg-1',{
-                                y:-60
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 80,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-1',{
-                                y:-80
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 80,
-                                delay:0.3
-                            });
-                        } else if (width >= 768) {
-                            gsap.fromTo('#head-1',{
-                                y:-30
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60
-                            });
-                            gsap.fromTo('#bg-1',{
-                                y:-30
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-1',{
-                                y:-60
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-1',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60,
-                                delay:0.3
-                            });
+                    function text1(width: number) {
+                        const p2 = document.querySelector('.p2-text')
+                        if (width >= 375){
+                            (p2 as Element).textContent = "STRAWBERRY CHEESECAKE";
                         } else {
-                           gsap.fromTo('#head-1',{
-                        y:-30
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-1',
-                            scrub: true,
-                            start: 'top 80%',
-                            end: 'bottom 80%'
-                        },
-                        y: 150
-                    });
-                    gsap.fromTo('#img-1',{
-                        y:0
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-1',
-                            scrub: true,
-                            start: 'top 70%',
-                            end: 'bottom 70%'
-                        },
-                        y: 200,
-                        delay:0.2
-                    });
-                    gsap.fromTo('#bg-1',{
-                        y:-10
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-1',
-                            scrub: true,
-                            start: 'top 80%',
-                            end: 'bottom 80%'
-                        },
-                        y: 200,
-                        delay:0.3
-                    }); 
+                            (p2 as Element).textContent = "STRAWBERRY ..";
                         }
-                    }
-                    
-                    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                        
-                    media1(screenWidth);
+                    };
 
-                    function media2(width: number) {
-                        if (width >= 2560){
-                            gsap.fromTo('#head-2',{
-                                y:-50
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 100
-                            });
-                            gsap.fromTo('#bg-2',{
-                                y:-90
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 30,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-2',{
-                                y:-100
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 100,
-                                delay:0.3
-                            });
-                        } else if ( width >= 1920){
-                            gsap.fromTo('#head-2',{
-                                y:-60
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 80
-                            });
-                            gsap.fromTo('#bg-2',{
-                                y:-70
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: -5,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-2',{
-                                y:-80
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 80,
-                                delay:0.3
-                            });
-                        } else if( width >= 1440) {
-                            gsap.fromTo('#head-2',{
-                                y:-30
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60
-                            });
-                            gsap.fromTo('#bg-2',{
-                                y:-20
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 3,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-2',{
-                                y:-50
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 50,
-                                delay:0.3
-                            });
-                        } else if (width >= 768) {
-                            gsap.fromTo('#head-2',{
-                                y:-30
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60
-                            });
-                            gsap.fromTo('#bg-2',{
-                                y:-40
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 10,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-2',{
-                                y:-40
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-2',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60,
-                                delay:0.3
-                            });
+                    function text2(width: number) {
+                        const p3 = document.querySelector('.p3-text')
+                        if (width >= 375){
+                            (p3 as Element).textContent = "WATERMELON CHUNKS";
                         } else {
-                           gsap.fromTo('#head-2',{
-                        y:-30
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-2',
-                            scrub: true,
-                            start: 'top 80%',
-                            end: 'bottom 80%'
-                        },
-                        y: 60
-                    });
-                    gsap.fromTo('#img-2',{
-                        y:-40
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-2',
-                            scrub: true,
-                            start: 'top 70%',
-                            end: 'bottom 70%'
-                        },
-                        y: 90,
-                        delay:0.2
-                    });
-                    gsap.fromTo('#bg-2',{
-                        y:-30
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-2',
-                            scrub: true,
-                            start: 'top 80%',
-                            end: 'bottom 80%'
-                        },
-                        y: 3,
-                        delay:0.3
-                    }); 
+                            (p3 as Element).textContent = "WATERMELON ..";
                         }
-                    }
-                    
-                    const screenWidth2 = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                        
-                    media2(screenWidth2);
+                    };
 
-                    function media3(width: number) {
-                        if (width >= 2560){
-                            gsap.fromTo('#head-3',{
-                                y:-50
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 100
-                            });
-                            gsap.fromTo('#bg-3',{
-                                y:-70
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 30,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-3',{
-                                y:-100
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 150,
-                                delay:0.3
-                            });
-                        } else if ( width >= 1920){
-                            gsap.fromTo('#head-3',{
-                                y:-60
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 80
-                            });
-                            gsap.fromTo('#bg-3',{
-                                y:-60
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: -5,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-3',{
-                                y:-80
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 80,
-                                delay:0.3
-                            });
-                        } else if( width >= 1440) {
-                            gsap.fromTo('#head-3',{
-                                y:-30
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60
-                            });
-                            gsap.fromTo('#bg-3',{
-                                y:-20
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 3,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-3',{
-                                y:-50
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 50,
-                                delay:0.3
-                            });
-                        } else if (width >= 768) {
-                            gsap.fromTo('#head-3',{
-                                y:-30
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60
-                            });
-                            gsap.fromTo('#bg-3',{
-                                y:-5
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 10,
-                                delay:0.2
-                            });
-                            gsap.fromTo('#ov-3',{
-                                y:-40
-                            },{
-                                scrollTrigger: {
-                                    trigger: '#product-3',
-                                    scrub: true,
-                                    start: 'top 50%',
-                                    end: 'bottom 50%'
-                                },
-                                y: 60,
-                                delay:0.3
-                            });
-                        } else {
-                           gsap.fromTo('#head-3',{
-                        y:-30
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-3',
-                            scrub: true,
-                            start: 'top 80%',
-                            end: 'bottom 80%'
-                        },
-                        y: 60
-                    });
-                    gsap.fromTo('#img-3',{
-                        y:-40
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-3',
-                            scrub: true,
-                            start: 'top 70%',
-                            end: 'bottom 70%'
-                        },
-                        y: 100,
-                        delay:0.2
-                    });
-                    gsap.fromTo('#bg-3',{
-                        y:-80
-                    },{
-                        scrollTrigger: {
-                            trigger: '#product-3',
-                            scrub: true,
-                            start: 'top 80%',
-                            end: 'bottom 80%'
-                        },
-                        y: 5,
-                        delay:0.3
-                    }); 
-                        }
-                    }
+                    const screen1 = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
                     
-                    const screenWidth3 = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                        
-                    media3(screenWidth3);
+                    text1(screen1);
+                    text2(screen1);
 
                     function media4(width: number) {
                         if (width >= 768){
@@ -651,73 +282,80 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section h-[240rem] bg-[#ffc0cb] overflow-hidden">
+        <section className="catalog-section h-[660vw] overflow-hidden">
             <div className="catalog h-[inherit]" ref={catRef}>
                 <div className="catalog-content h-[inherit]">
                     <div className="catalog-head">
                         <div className="head flex justify-center">
-                            <h1 className="cat-head mt-[300px] text-3xl font-bulleto p-4 text-white 4 ">Explore our products!</h1>
-                        </div>
-                        <div className="catalog-img mt-10">
-                            <Image src={collection} priority alt={""}></Image>
-                        </div>  
+                            <h1 className="cat-head mt-[100px] text-3xl font-bulleto p-4 text-black 4 ">Explore our products!</h1>
+                        </div> 
                     </div>
                     <div className="catalog-products mt-[100px] h-[inherit]">
-                        <div className="product relative" id="product-1">
-                            <div className="product-content relative">   
-                                <div className="product-txt absolute z-[5] ">
-                                    <div className="product-head relative top-[20vh] font-bulleto text-white" id="head-1">
-                                        <h3 className="mt-[5vh] ml-[2vh] text-xl">Taste The Campfire</h3>
-                                        <h1 className="text-center text-4xl">BANANA SMORES</h1>
+                        <div className="grid-products mx-[1.25rem]">
+                            <div className="products1-3 grid gap-1 grid-cols-1 auto-rows-auto">
+                                <a href="#" id="product-1" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                    <div className="prod-1-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
+                                        <Image src={bnnaBg} className="p1-bg object-cover w-full h-full invisible" alt={""} ></Image>
+                                        <Image className="p1-img w-full h-full absolute left-0 top-0 scale-75" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
                                     </div>
-                                        <p className="font-poppins relative mt-5 text-center text-sm mx-[4px] top-[50vh] text-white">Close your eyes, take a bite, and be transported. Picture flickering flames, the crackling of graham crackers, the sweetness of bananas blended with marshmallows, and laughter around the campfire. Now open your eyes; that magic is in every pint of our Banana Smores Ice Cream.</p>
-                                </div>
-                                <div className="product-img absolute z-[4]" id="img-1">
-                                    <Image className="ov-img absolute z-[10]" id="ov-1" src={bnnas} priority alt={""}></Image>
-                                    <Image className="image relative brightness-[.70]" src={banana} priority alt={""}></Image>
-                                </div>
-                            </div>
-                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-1" priority src={bnnaBg} alt={""}></Image>
-                        </div>
-                        <div className="product relative top-[6vh]" id="product-2">
-                            <div className="product-content relative">   
-                                <div className="product-txt absolute z-[5] ">
-                                    <div className="product-head relative top-[20vh] font-bulleto text-white" id="head-2">
-                                        <h3 className="mt-[5vh] ml-[2vh] text-lg">Just Like Grandma Used To Make It</h3>
-                                        <h1 className="text-center text-4xl" id="h1-p2">STRAWBERRY CHEESCAKE</h1>
+                                    <div className="prod-1-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
+                                        <div className="">
+                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">BANANA SMORES</div>
+                                            <div className="font-poppins text-black text-[.75rem]">Serving Size: 473ml</div>
+                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP.</div>
+                                        </div>  
+                                        <div className="flex items-center">    
+                                            <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
+                                                <i></i>
+                                            </button>
+                                        </div>                                 
                                     </div>
-                                        <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Imagine sunny days, holding Poppy's Strawberry Cheesecake Ice Cream, with laughter and joy all around. Creamy cheesecake-infused ice cream meets vibrant strawberry sweetness - a culinary masterpiece embodying our crafted love.</p>
-                                </div>
-                                <div className="product-img absolute z-[4]" id="img-2">
-                                    <Image className="ov-img absolute z-[10]" id="ov-2" src={strberries} priority alt={""}></Image>
-                                    <Image className="image relative brightness-[.70]" src={strberry} priority alt={""}></Image>
-                                </div>
-                            </div>
-                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-2" priority src={strBg} alt={""}></Image>
-                        </div>
-                        <div className="product relative top-[6vh]" id="product-3">
-                            <div className="product-content relative">   
-                                <div className="product-txt absolute z-[5] ">
-                                    <div className="product-head relative top-[20vh] font-bulleto text-white" id="head-3">
-                                        <h3 className="mt-[5vh] ml-[2vh] text-xl">The Taste Of Summer</h3>
-                                        <h1 className="text-center text-4xl" id="h1-p2">WATERMELON CHUNKS</h1>
+                                </a>
+                                <a href="#" id="product-2" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                    <div className="prod-2-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
+                                        <Image src={strBg} className="p2-bg object-cover w-full h-full invisible" alt={""} ></Image>
+                                        <Image className="p2-img w-full h-full absolute left-0 top-0 scale-75" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
                                     </div>
-                                        <p id="p-p2" className="font-poppins relative mt-[-5] text-center text-sm mx-[4px] top-[42vh] text-white">Evoke the spirit of summer joy with our Watermelon Chunks Ice Cream. Authentic watermelon pieces meld seamlessly with creamy ice cream, creating a refreshing treat that embodies the season's essence in every delightful bite. Close your eyes, and taste the summer joy.</p>
-                                </div>
-                                <div className="product-img absolute z-[4]" id="img-3">
-                                    <Image className="ov-img absolute z-[10]" id="ov-3" src={wtrmelons} priority alt={""}></Image>
-                                    <Image className="image relative brightness-[.70]" src={wtrmelon} priority alt={""}></Image>
-                                </div>
+                                    <div className="prod-2-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
+                                        <div className="">
+                                            <div className="p2-text font-poppins text-[#b80c09] text-[1.2rem]">STRAWBERRY ..</div>
+                                            <div className="font-poppins text-black text-[.75rem]">Serving Size: 473ml</div>
+                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP.</div>
+                                        </div>  
+                                        <div className="flex items-center">    
+                                            <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
+                                                <i></i>
+                                            </button>
+                                        </div>                                 
+                                    </div>
+                                </a>
+                                <a href="#" id="product-3" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                    <div className="prod-3-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
+                                        <Image src={wtrmBg} className="p3-bg object-cover w-full h-full invisible" alt={""} ></Image>
+                                        <Image className="p3-img w-full h-full absolute left-0 top-0 scale-75" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
+                                    </div>
+                                    <div className="prod-3-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
+                                        <div className="">
+                                            <div className="p3-text font-poppins text-[#b80c09] text-[1.2rem]">WATERMELON ..</div>
+                                            <div className="font-poppins text-black text-[.75rem]">Serving Size: 473ml</div>
+                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP.</div>
+                                        </div>  
+                                        <div className="flex items-center">    
+                                            <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
+                                                <i></i>
+                                            </button>
+                                        </div>                                 
+                                    </div>
+                                </a>
                             </div>
-                            <Image className="h-[100vh] object-cover w-[100%] relative brightness-[.70]" id="bg-3" priority src={wtrmBg} alt={""}></Image>
                         </div>
-                        <div className="product bg-white h-[inherit]" id="product-4">
+                        <div className="product  h-[inherit]" id="product-4">
                             <div className="pop-content relative">
                                 <div className="pop-head flex flex-col">
-                                    <h2 className="pt-8 font-bulleto text-center text-[1.5em]">We Also Have</h2>
-                                    <h1 className="pt-5 font-bulleto text-center mt-[-10px] text-5xl">Popsiclesss !!</h1>
+                                    <h2 className="p4-head pt-8 font-bulleto text-center text-[1.5em] text-white">We Also Have</h2>
+                                    <h1 className="p4-head  pt-5 font-bulleto text-center mt-[-10px] text-white text-5xl">Popsiclesss !!</h1>
                                 </div>
-                                <div className="pop-img flex flex-row justify-around mx-10 mt-10">
+                                <div className="pop-img flex flex-row justify-around mx-12 mt-10">
                                     <Image className="pop-left relative w-[80%] z-30" src={mngPop} priority alt={""}></Image>
                                     <Image className="pop-right relative w-[80%] " src={strPop} priority alt={""}></Image>
                                 </div>

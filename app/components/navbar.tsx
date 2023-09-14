@@ -1,7 +1,11 @@
+'use client'
 import Image, { StaticImageData } from "next/image"
 import { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 export default function Navbar(props:{src:StaticImageData, hov: StaticImageData}) {
+    gsap.registerPlugin(ScrollTrigger);
 
     const [isHovering, setIsHovering] = useState(false);
 
@@ -68,7 +72,6 @@ export default function Navbar(props:{src:StaticImageData, hov: StaticImageData}
           <ul className="nav-item text-[2.75vh] flex gap-1 flex-row items-center justify-center mt-[3vh] mr-[4vw]">
             <li><button className="button sm-dev md-dev alternative">Home</button></li>
             <li><button className="button alternative">Catalog</button></li>
-            <li><button className="button sm-dev alternative">About Us</button></li>
             <li><button className="button alternative">Contact Us</button></li>
           </ul>
         </nav>

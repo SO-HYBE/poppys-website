@@ -3,7 +3,6 @@ import Hero from './components/hero'
 import Navbar from './components/navbar'
 import head from '../public/red-svg.svg'
 import Lenis from '@studio-freight/lenis'
-import { useEffect } from 'react';
 import localFont from 'next/font/local'
 import hov from '../public/white-svg.svg';
 import About from './components/about';
@@ -12,7 +11,8 @@ import Merch from './components/merch';
 import Footer from './components/footer'
 import {Poppins} from 'next/font/google';
 import main from '../public/skate.png'
-import heroImg from '../public/hero-img.jpg'
+import heroImg from '../public/hero-img.png'
+import { useEffect } from 'react'
 
 const bulleto = localFont({ src: './styles/BULLETTO-KILLA.ttf', variable: '--bulleto' })
 const poppins = Poppins({
@@ -21,6 +21,7 @@ const poppins = Poppins({
   weight: ["300" , "100" , "200" , "400" , "500" , "600" , "700" , "800" , "900"]
 })
 export default function Home() {
+  
   //-------- Lenis Smooth Scroll---------
   useEffect(()=>{
     const lenis = new Lenis()

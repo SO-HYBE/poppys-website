@@ -1,3 +1,4 @@
+'use client'
 import { useRef } from 'react';
 import black from '../../public/black-svg.svg'
 import Image from 'next/image'
