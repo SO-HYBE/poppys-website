@@ -292,7 +292,7 @@ export default function Catalog() {
                     <div className="catalog-products mt-[100px] h-[inherit]">
                         <div className="grid-products mx-[1.25rem]">
                             <div className="products1-3 grid gap-1 grid-cols-1 auto-rows-auto">
-                                <a href="#" id="product-1" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                <a href="" id="product-1" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
                                     <div className="prod-1-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image loading="lazy" src={bnnaBg} className="p1-bg object-cover w-full h-full invisible" alt={""} ></Image>
                                         <Image loading="lazy" className="p1-img w-full h-full absolute left-0 top-0 scale-75" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
@@ -305,12 +305,13 @@ export default function Catalog() {
                                         </div>  
                                         <div className="flex items-center">    
                                             <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
+                                                <a href="#"></a>
                                                 <i></i>
                                             </button>
                                         </div>                                 
                                     </div>
                                 </a>
-                                <a href="#" id="product-2" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                <a href="" id="product-2" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
                                     <div className="prod-2-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image loading="lazy" src={strBg} className="p2-bg object-cover w-full h-full invisible" alt={""} ></Image>
                                         <Image loading="lazy" className="p2-img w-full h-full absolute left-0 top-0 scale-75" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
@@ -323,12 +324,13 @@ export default function Catalog() {
                                         </div>  
                                         <div className="flex items-center">    
                                             <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
+                                                <a href="#"></a>
                                                 <i></i>
                                             </button>
                                         </div>                                 
                                     </div>
                                 </a>
-                                <a href="#" id="product-3" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                <a href="" id="product-3" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
                                     <div className="prod-3-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image loading="lazy" src={wtrmBg} className="p3-bg object-cover w-full h-full invisible" alt={""} ></Image>
                                         <Image loading="lazy" className="p3-img w-full h-full absolute left-0 top-0 scale-75" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
@@ -341,6 +343,7 @@ export default function Catalog() {
                                         </div>  
                                         <div className="flex items-center">    
                                             <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
+                                                <a href="#"></a>
                                                 <i></i>
                                             </button>
                                         </div>                                 
