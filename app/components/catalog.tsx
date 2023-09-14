@@ -355,8 +355,8 @@ export default function Catalog() {
                                     <h1 className="p4-head  pt-5 font-bulleto text-center mt-[-10px] text-white text-5xl">Popsiclesss !!</h1>
                                 </div>
                                 <div className="pop-img flex flex-row justify-around mx-12 mt-10">
-                                    <Image loading="lazy" className="pop-left relative w-[80%] z-30" src={mngPop} priority alt={""}></Image>
-                                    <Image loading="lazy" className="pop-right relative w-[80%] " src={strPop} priority alt={""}></Image>
+                                    <Image loading="lazy" className="pop-left relative w-[80%] z-30" src={mngPop} alt={""}></Image>
+                                    <Image loading="lazy" className="pop-right relative w-[80%] " src={strPop} alt={""}></Image>
                                 </div>
                             </div>
                         </div>
