@@ -25,13 +25,13 @@ export default function Container(){
       },[])
 
       return(
-        <div className='parent-container'>
+        <>
             <Navbar src={head} hov={hov} />
             <Hero hero={heroImg}/>
             <About />
             <Catalog />
             <Merch />
             <Footer/>
-        </div>
+        </>
       )
 }

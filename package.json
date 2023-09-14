@@ -20,7 +20,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "gsap": "^3.12.2",
-    "next": "^13.4.13",
+    "next": "^13.4.19",
     "next-images": "^1.8.5",
     "node-marquee": "^3.0.6",
     "postcss": "8.4.26",
