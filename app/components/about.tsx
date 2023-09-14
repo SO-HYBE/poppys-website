@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/all";
-import fence from '../../public/about.png'
+import fence from '../../public/about.webp'
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
 import { useRef } from "react";
 import SplitType from "split-type";

@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
+import hero from '../../public/hero-img.webp'
 import useIsomorphicLayoutEffect from 'use-isomorphic-layout-effect';
 import SplitType from "split-type";
 
@@ -81,7 +82,7 @@ export default function Hero(){
           </div>
           <div className="hero-bg-vid overflow-hidden relative z-[-99] w-auto flex">
             <div className="overlay absolute top-0 left-0 right-0 bottom-0 z-10"></div>
-            <Image fetchPriority="high" priority width={1920} height={1080} className="bg-vid h-[120vh] block w-[100vw] object-cover justify-center" src={'https://i.imgur.com/kavvKnN.jpg'} alt="main picture of poppy sliding into view"></Image>
+            <Image fetchPriority="high" priority width={1920} height={1080} className="bg-vid h-[120vh] block w-[100vw] object-cover justify-center" src={hero} alt="main picture of poppy sliding into view"></Image>
           </div>
           <div className="marq h-[50vh]">
             <div className="marquee">

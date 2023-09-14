@@ -1,9 +1,9 @@
 import Image from "next/image";
-import face from '../../public/face.png';
+import face from '../../public/face.webp';
 import { gsap } from "gsap";
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
 import { useEffect, useRef } from "react";
-import tee from '../../public/tee.png';
+import tee from '../../public/tee.webp';
 
 export default function Merch (){
 

@@ -23,6 +23,7 @@ export default function RootLayout({
     <html  lang="en">
       <Head>
         <title>Poppy's Ice Cream</title>
+        <link rel='icon' href='/favicon.ico'/>
         <link rel="preload" href="http://localhost:3000/_next/static/css/app/layout.css?v=1690558771863" as="style" />
         <link rel="manifest" href="~/manifest.json" />
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
