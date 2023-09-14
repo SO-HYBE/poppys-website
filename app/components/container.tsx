@@ -27,7 +27,7 @@ export default function Container(){
       return(
         <>
             <Navbar src={head} hov={hov} />
-            <Hero hero={heroImg}/>
+            <Hero/>
             <About />
             <Catalog />
             <Merch />

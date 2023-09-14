@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import useIsomorphicLayoutEffect from 'use-isomorphic-layout-effect';
 import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Hero(props:{hero: StaticImageData}){
+export default function Hero(){
 
   //------------------ Hero content animation -----------------
     const ref  : any= useRef();
