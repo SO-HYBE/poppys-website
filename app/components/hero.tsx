@@ -9,7 +9,7 @@ import SplitType from "split-type";
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Hero(props:{main:StaticImageData, hero: StaticImageData}){
+export default function Hero(props:{hero: StaticImageData}){
 
   //------------------ Hero content animation -----------------
     const ref  : any= useRef();
