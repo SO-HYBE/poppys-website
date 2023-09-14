@@ -294,8 +294,8 @@ export default function Catalog() {
                             <div className="products1-3 grid gap-1 grid-cols-1 auto-rows-auto">
                                 <a href="#" id="product-1" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
                                     <div className="prod-1-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
-                                        <Image src={bnnaBg} className="p1-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image className="p1-img w-full h-full absolute left-0 top-0 scale-75" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
+                                        <Image loading="lazy" src={bnnaBg} className="p1-bg object-cover w-full h-full invisible" alt={""} ></Image>
+                                        <Image loading="lazy" className="p1-img w-full h-full absolute left-0 top-0 scale-75" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-1-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
@@ -312,8 +312,8 @@ export default function Catalog() {
                                 </a>
                                 <a href="#" id="product-2" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
                                     <div className="prod-2-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
-                                        <Image src={strBg} className="p2-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image className="p2-img w-full h-full absolute left-0 top-0 scale-75" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
+                                        <Image loading="lazy" src={strBg} className="p2-bg object-cover w-full h-full invisible" alt={""} ></Image>
+                                        <Image loading="lazy" className="p2-img w-full h-full absolute left-0 top-0 scale-75" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-2-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
@@ -330,8 +330,8 @@ export default function Catalog() {
                                 </a>
                                 <a href="#" id="product-3" className="bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
                                     <div className="prod-3-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
-                                        <Image src={wtrmBg} className="p3-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image className="p3-img w-full h-full absolute left-0 top-0 scale-75" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
+                                        <Image loading="lazy" src={wtrmBg} className="p3-bg object-cover w-full h-full invisible" alt={""} ></Image>
+                                        <Image loading="lazy" className="p3-img w-full h-full absolute left-0 top-0 scale-75" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-3-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
@@ -355,8 +355,8 @@ export default function Catalog() {
                                     <h1 className="p4-head  pt-5 font-bulleto text-center mt-[-10px] text-white text-5xl">Popsiclesss !!</h1>
                                 </div>
                                 <div className="pop-img flex flex-row justify-around mx-12 mt-10">
-                                    <Image className="pop-left relative w-[80%] z-30" src={mngPop} priority alt={""}></Image>
-                                    <Image className="pop-right relative w-[80%] " src={strPop} priority alt={""}></Image>
+                                    <Image loading="lazy" className="pop-left relative w-[80%] z-30" src={mngPop} priority alt={""}></Image>
+                                    <Image loading="lazy" className="pop-right relative w-[80%] " src={strPop} priority alt={""}></Image>
                                 </div>
                             </div>
                         </div>

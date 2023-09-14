@@ -133,7 +133,7 @@ export default function About(){
                         Welcome to Poppy's, a haven where nostalgia reigns supreme and every ice cream scoop becomes a portal to cherished memories. Beyond being a mere ice cream shop, we offer a voyage back in time to the days of carefree innocence. Our flavors encapsulate the essence of joy, aimed at forging connections and weaving new moments with every delightful bite. Join us in this captivating escapade where the past seamlessly merges with the present, resulting in a medley of frozen delights and heartfelt instances.
                     </p>
                     <div className="about-image mx-4 top-[180px]">
-                        <Image className="abt-img skewElem object-fill rounded-md" priority src={fence} height={2000} width={3000} alt={"About Image with fence background"}></Image>
+                        <Image loading="lazy" className="abt-img skewElem object-fill rounded-md" priority src={fence} height={2000} width={3000} alt={"About Image with fence background"}></Image>
                     </div>
                 </div>
             </div>

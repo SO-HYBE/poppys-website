@@ -96,9 +96,9 @@ export default function Merch (){
         <section className="merch-section h-[72vh] relative overflow-hidden bg-white" ref={merchRef}>
             <div className="btn-cont h-[10vh] bg-[#b80c09] my-10 mx-5 rounded-[20px]">
                 <span className="span-btn flex justify-center items-center h-full font-bulleto text-2xl text-white">ORDER NOW</span>
-                <Image priority id="face1" className="face scale-[0.7] invisible left-4 top-[2em] relative" src={face} width={50} height={50} alt={""}></Image>
-                <Image priority id="face2" className="face scale-[0.7] invisible left-[75%] top-[-50px] relative hue-rotate-90" src={face} width={50} height={50} alt={""}></Image>
-                <Image priority id="face3" className="face scale-[0.7] invisible left-[30%] relative top-[-220px] hue-rotate-[200deg]" src={face} width={50} height={50} alt={""}></Image>
+                <Image loading="lazy" priority id="face1" className="face scale-[0.7] invisible left-4 top-[2em] relative" src={face} width={50} height={50} alt={""}></Image>
+                <Image loading="lazy" priority id="face2" className="face scale-[0.7] invisible left-[75%] top-[-50px] relative hue-rotate-90" src={face} width={50} height={50} alt={""}></Image>
+                <Image loading="lazy" priority id="face3" className="face scale-[0.7] invisible left-[30%] relative top-[-220px] hue-rotate-[200deg]" src={face} width={50} height={50} alt={""}></Image>
             </div>
             <div className="merch-container bg-[#ffc0cb] h-full">
                 <div className="merc-text mt-[1.5rem] pt-[1.75rem]">
@@ -110,7 +110,7 @@ export default function Merch (){
                     <button className="button-merch alternative font-poppins">Learn More!</button>
                     </div>
                     <div className="merch-img mt-[6vh] relative">
-                        <Image className="object-scale-down absolute" width={1920} height={1080} src={tee} alt={""} priority></Image>
+                        <Image loading="lazy" className="object-scale-down absolute" width={1920} height={1080} src={tee} alt={""} priority></Image>
                     </div>
                 </div>
             </div>
