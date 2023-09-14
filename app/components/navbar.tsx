@@ -1,4 +1,3 @@
-'use client'
 import Image, { StaticImageData } from "next/image"
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";

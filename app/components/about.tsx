@@ -1,4 +1,3 @@
-'use client'
 import { gsap } from "gsap";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/all";

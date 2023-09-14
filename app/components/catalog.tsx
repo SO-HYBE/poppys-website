@@ -1,4 +1,3 @@
-'use client'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";

@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import Hero from './hero'
 import Navbar from './navbar'
 import head from '../../public/red-svg.svg'

@@ -23,10 +23,6 @@
     transition: transform .5s;
 }
 
-.hero-p{
-    font-family: 'Poppins', sans-serif;
-}
-
 /*------------------- Marquee styling -----------------*/
 
 .marq{
@@ -76,9 +72,8 @@
     padding-bottom: 1rem;
     transform: rotate(-5deg) translateY(-125px) translateX(-5px);
     -webkit-text-stroke: 1.5px #fff;
-    text-stroke: 1.5px #fff;
+    text-shadow: 1.5px #fff;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
     color: transparent;
     transition: all 0.5s ease;
     -webkit-font-smoothing: antialiased;
@@ -87,9 +82,8 @@
   
   .marquee:hover {
     -webkit-text-stroke: 1.5px #fff;
-      text-stroke: 1.5px #fff;
+      text-shadow: 1.5px #fff;
       -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
       color: transparent;
       transition: all 0.5s ease;
       -webkit-font-smoothing: antialiased;
@@ -98,9 +92,8 @@
   }
   .marquee-2:hover {
     -webkit-text-stroke: initial;
-      text-stroke:initial;
+      text-shadow:initial;
       -webkit-text-fill-color: initial;
-      text-fill-color: initial;
       color: initial;
       transition: all 0.5s ease;
       -webkit-font-smoothing: antialiased;
@@ -109,9 +102,8 @@
   }
   .marquee-3:hover {
     -webkit-text-stroke: 1.5px #fff;
-      text-stroke: 1.5px #fff;
+      text-shadow: 1.5px #fff;
       -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
       color: transparent;
       transition: all 0.5s ease;
       -webkit-font-smoothing: antialiased;
