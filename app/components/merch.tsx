@@ -111,7 +111,7 @@ export default function Merch (){
                     <button className="button-merch alternative font-poppins">Learn More!</button>
                     </div>
                     <div className="merch-img mt-[6vh] relative">
-                        <Image className="object-scale-down absolute" src={tee} alt={""} priority></Image>
+                        <Image className="object-scale-down absolute" width={1920} height={1080} src={tee} alt={""} priority></Image>
                     </div>
                 </div>
             </div>
