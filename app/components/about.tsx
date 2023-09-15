@@ -31,18 +31,37 @@ export default function About(){
                       }
                     });
 
-                    gsap.from(".line span", {
-                        scrollTrigger:{
-                            trigger: '.about-head',
-                            start: 'top center',
-                            end: 'top center',
-                            toggleActions: "play play reverse reverse"
-                        },
-                        duration: 1.8,
-                        y: 200,
-                        ease: "power4.out"
-                      })
-                    
+                      function media1(width: number) {
+                            if(width>= 2560){
+                                gsap.from(".line span", {
+                                    scrollTrigger:{
+                                        trigger: '.about-head',
+                                        start: 'top center',
+                                        end: 'top center',
+                                        toggleActions: "play play reverse reverse"
+                                    },
+                                    duration: 1.8,
+                                    y: 600,
+                                    ease: "power4.out"
+                                  })
+                            } else {
+                                gsap.from(".line span", {
+                                    scrollTrigger:{
+                                        trigger: '.about-head',
+                                        start: 'top center',
+                                        end: 'top center',
+                                        toggleActions: "play play reverse reverse"
+                                    },
+                                    duration: 1.8,
+                                    y: 200,
+                                    ease: "power4.out"
+                                  })
+                            }
+                      }
+                    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+             
+                    media1(screenWidth);
+
                     const splitAbout = document.querySelectorAll('.about-p');
                     splitAbout.forEach((chars ,i) => {
                         const about = new SplitType(chars as HTMLElement, {types: 'words, chars'}) 
@@ -101,7 +120,7 @@ export default function About(){
                                     scrollTrigger: {
                                         trigger: chars,
                                         start: 'top 80%',
-                                        end: 'bottom 80%',
+                                        end: 'bottom 70%',
                                         scrub: true
                                     },
                                     duration: 2,
@@ -123,7 +142,7 @@ export default function About(){
     },[]);
 
     return(
-        <section className="about-section h-[130vh] mp-[200px] snap-mandatory snap-x ">
+        <section className="about-section h-[360vw] mp-[200px] snap-mandatory snap-x ">
             <div className="about bg-white flex flex-col snap-start" ref={aboutRef}>
                 <div className="line bg-white overflow-hidden">
                     <span className="about-head flex justify-center font-bulleto text-5xl pt-[20rem] text-black">About Us</span>

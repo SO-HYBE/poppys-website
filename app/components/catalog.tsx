@@ -286,7 +286,7 @@ export default function Catalog() {
                 <div className="catalog-content h-[inherit]">
                     <div className="catalog-head">
                         <div className="head flex justify-center">
-                            <h1 className="cat-head mt-[100px] text-3xl font-bulleto p-4 text-black 4 ">Explore our products!</h1>
+                            <h1 className="cat-head mt-[100px] text-2xl font-bulleto p-4 text-black 4 ">Explore our products!</h1>
                         </div> 
                     </div>
                     <div className="catalog-products mt-[100px] h-[inherit]">
