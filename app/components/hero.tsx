@@ -31,7 +31,8 @@ export default function Hero(){
                   delay:2,
                   duration: .1,
                   visibility: 'visible',
-                  autoAlpha: 1
+                  autoAlpha: 1,
+                  color: 'white'
                 })
                 var tl1 : GSAPTimeline = gsap.timeline({
                   scrollTrigger: {
@@ -73,7 +74,7 @@ export default function Hero(){
       <><section className="hero-section">
         <div className="hero h-[115vh] overflow-hidden pb-[50vh]" ref={ref}>
           <div className="hero-content absolute z-10 h-[95vh] w-screen top-0 left-0 flex items-end text-white px-[4vw]">
-            <div className="span-container flex flex-col font-bulleto leading-[1.2] pb-2">
+            <div className="span-container flex flex-col font-bulleto leading-[1.2] pb-2 text-[#fefae0]">
               <div className="upper-span">
               <span className="text-move span-1 pl-[5px]">Taste</span>
               <span className="text-move pl-3 span-2">Of</span>
