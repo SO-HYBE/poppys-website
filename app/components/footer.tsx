@@ -1,6 +1,4 @@
 import { useRef } from 'react';
-import black from '../../public/black-svg.svg'
-import Image from 'next/image'
 import useIsomorphicLayoutEffect from 'use-isomorphic-layout-effect';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -60,11 +58,9 @@ export default function Footer (){
     return(
 <footer className="bg-[#b80c09] footer-section relative -z-10 mt-[-3rem]" ref={footerRef}>
   <div className="mx-auto max-w-5xl px-4 pb-10 pt-[5.5rem] sm:px-6 lg:px-8 footer-div">
-    <Image loading="lazy" className='mt-3 footer-img' src={black} alt='' width={100} height={100}></Image>
-
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">
     &copy; 2023 Poppy's Ice Cream. All rights reserved.</p>
-    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">Made with ❤️ by Sohybe Ibrahim</p>
+    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white"><a href="https://flawless.productions/">Made with ❤️ by Flawless Productions</a></p>
     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
       <li>
         <a className="text-white transition hover:text-slate-400" href="/">

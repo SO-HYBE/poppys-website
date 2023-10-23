@@ -30,7 +30,6 @@ export default function Container(){
             <Hero/>
             <About />
             <Catalog />
-            <Merch />
             <Footer/>
         </>
       )
