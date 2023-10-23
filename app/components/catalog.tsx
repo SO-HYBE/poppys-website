@@ -290,7 +290,7 @@ export default function Catalog() {
                         </div> 
                     </div>
                     <div className="catalog-products mt-[100px] h-[inherit]">
-                        <div className="grid-products mx-[1.25rem]">
+                        <div className="grid-products mx-[4vw]">
                             <div className="products1-3 grid gap-1 grid-cols-1 auto-rows-auto">
                                 <div id="product-1" className="prod bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
                                     <div className="prod-1-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
