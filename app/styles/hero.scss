@@ -71,8 +71,8 @@
     background-color: #b80c09;
     padding-bottom: 1rem;
     transform: rotate(-5deg) translateY(-125px) translateX(-5px);
-    -webkit-text-stroke: 1.5px #fff;
-    text-shadow: 1.5px #fff;
+    -webkit-text-stroke: 1.5px white;
+    text-shadow: 1.5px white;
     -webkit-text-fill-color: transparent;
     color: transparent;
     transition: all 0.5s ease;
@@ -81,8 +81,8 @@
   
   
   .marquee:hover {
-    -webkit-text-stroke: 1.5px #fff;
-      text-shadow: 1.5px #fff;
+    -webkit-text-stroke: 1.5px #b80c09;
+      text-shadow: 1.5px #b80c09;
       -webkit-text-fill-color: transparent;
       color: transparent;
       transition: all 0.5s ease;
@@ -101,8 +101,8 @@
   
   }
   .marquee-3:hover {
-    -webkit-text-stroke: 1.5px #fff;
-      text-shadow: 1.5px #fff;
+    -webkit-text-stroke: 1.5px #b80c09;
+      text-shadow: 1.5px #b80c09;
       -webkit-text-fill-color: transparent;
       color: transparent;
       transition: all 0.5s ease;
@@ -132,13 +132,21 @@
   }
   
   .marquee__group span {
-    color: white;
+    color: #b80c09;
     font-size: 2.5em;
     font-weight: 800;
     white-space: nowrap;
     font-family: var(--bulleto), sans-serif !important;
     /*text-transform: uppercase;*/
     
+  }
+
+  .marquee__group2 span {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 800;
+    white-space: nowrap;
+    font-family: var(--bulleto), sans-serif !important;
   }
   
   @keyframes scroll {
@@ -176,28 +184,21 @@
 @media (min-width: 768px) {
 
     .marquee__group span {
-        color: white;
+        color: #b80c09;
         font-size: 5vw;    
       }
-      .span-container{
-        margin-top: 15vw;
-    }
+      .marquee__group2 span {
+        color: white;
+        font-size: 5vw;
+      }
 }
 
 @media (min-width: 1200px){
-    .span-container{
-        margin-top: 5vw;
-    }
     .upper-span{
         margin-bottom: -15px;
     }
 }
 
-@media (min-width: 1440px) {
-    .span-container{
-        margin-top: 2rem;
-    }
-}
 
 @media screen and (min-width: 1200px) {
     .marquee{
@@ -208,9 +209,3 @@
     }   
 }
 
-@media (min-width: 2560px) {
-    .span-container{
-        margin-top: 0;
-        width: 150%;
-    }
-}
