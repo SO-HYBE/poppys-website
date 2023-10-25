@@ -15,7 +15,7 @@ if (typeof window !== 'undefined') {
 }
 
   return (
-    <main className={`${bulleto.variable} ${poppins.variable} font-sans z-10 absolute`}>
+    <main className={`${bulleto.variable} ${poppins.variable} font-sans z-10 absolute select-none`}>
       <Container />
     </main>
   )

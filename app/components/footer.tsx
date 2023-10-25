@@ -8,7 +8,26 @@ export default function Footer (){
     const footerRef : any = useRef();
     const footerCtx = gsap.context(footerRef);
     useIsomorphicLayoutEffect(()=>{
+
+       
         footerCtx.add(()=>{
+          if(typeof window != 'undefined' ){
+            window.requestAnimationFrame(function(){
+                let proxy = { skew: 0 },
+                    skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+                    clamp = gsap.utils.clamp(-100, 100); // don't let the skew go beyond 20 degrees. 
+
+                ScrollTrigger.create({
+                  onUpdate: (self) => {
+                    let skew = clamp(self.getVelocity() / -300);
+                    // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+                    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+                      proxy.skew = skew;
+                      gsap.to(proxy, {skew: 0, duration: 10, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+                    }
+                  }
+                });
+              })}
             gsap.set('.footer-section', { yPercent: -50 })
 
             const uncover = gsap.timeline({ paused:true })
@@ -57,7 +76,7 @@ export default function Footer (){
     }, []);
     return(
 <footer className="bg-[#b80c09] footer-section relative -z-10 mt-[-3rem]" ref={footerRef}>
-  <div className="mx-auto max-w-5xl px-4 pb-10 pt-[5.5rem] sm:px-6 lg:px-8 footer-div">
+  <div className="mx-auto max-w-5xl px-4 pb-10 pt-[5.5rem] sm:px-6 lg:px-8 footer-div skewElem">
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">
     &copy; 2023 Poppy's Ice Cream. All rights reserved.</p>
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white"><a href="https://flawless.productions/">Made with ❤️ by Flawless Productions</a></p>

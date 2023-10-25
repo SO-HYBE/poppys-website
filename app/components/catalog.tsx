@@ -99,18 +99,18 @@ export default function Catalog() {
 
 
                     const anim1 = gsap.to('.p1-img', {
-                      scaleX: '0.7',
-                      scaleY: '0.7',
+                      scaleX: '0.8',
+                      scaleY: '0.8',
                       paused: true
                     });
                     const anim2 = gsap.to('.p2-img', {
-                      scaleX: '0.7',
-                      scaleY: '0.7',
+                      scaleX: '0.8',
+                      scaleY: '0.8',
                       paused: true
                     });
                     const anim3 = gsap.to('.p3-img', {
-                      scaleX: '0.7',
-                      scaleY: '0.7',
+                      scaleX: '0.8',
+                      scaleY: '0.8',
                       paused: true
                     });
                     
@@ -151,50 +151,6 @@ export default function Catalog() {
                         visibility: 'invisible',
                         autoAlpha: 0,
                         stagger: 0.65
-                    })
-
-                    gsap.to('.catalog', {
-                        scrollTrigger: { 
-                            trigger: '.catalog',
-                            start: 'top 60%',
-                            end: 'top 60%',
-                            scrub: false,
-                            toggleActions: 'play play reverse reverse'
-                        },
-                        backgroundColor: '#ffc0cb'
-                    })
-
-                    gsap.to('.cat-head', {
-                        scrollTrigger: { 
-                            trigger: '.catalog',
-                            start: 'top 60%',
-                            end: 'top 60%',
-                            scrub: false,
-                            toggleActions: 'play play reverse reverse'
-                        },
-                        color: 'white'
-                    })
-
-                    gsap.to('#product-4', {
-                        scrollTrigger: { 
-                            trigger: '#product-4',
-                            start: 'top 60%',
-                            end: 'top 60%',
-                            scrub: false,
-                            toggleActions: 'play play reverse reverse'
-                        },
-                        backgroundColor: 'white'
-                    })
-
-                    gsap.to('.p4-head ', {
-                        scrollTrigger: { 
-                            trigger: '.p4-head',
-                            start: 'top 60%',
-                            end: 'top 60%',
-                            scrub: false,
-                            toggleActions: 'play play reverse reverse'
-                        },
-                        color: 'black'
                     })
 
                     //--------------------------- Function for responsiveness ---------------------------------//
@@ -281,27 +237,27 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section h-[660vw] overflow-hidden">
+        <section className="catalog-section h-[350vh] overflow-hidden bg-[#fefae0]">
             <div className="catalog h-[inherit]" ref={catRef}>
                 <div className="catalog-content h-[inherit]">
                     <div className="catalog-head">
                         <div className="head flex justify-center">
-                            <h1 className="cat-head mt-[100px] text-2xl font-bulleto p-4 text-black 4 ">Explore our products!</h1>
+                            <h1 className="cat-head mt-[10rem] text-2xl font-bulleto text-[#b80c09]">Explore our products!</h1>
                         </div> 
                     </div>
-                    <div className="catalog-products mt-[100px] h-[inherit]">
+                    <div className="catalog-products mt-[5rem] h-[inherit]">
                         <div className="grid-products mx-[4vw]">
                             <div className="products1-3 grid gap-1 grid-cols-1 auto-rows-auto">
-                                <div id="product-1" className="prod bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                <div id="product-1" className="prod bg-white rounded-[1.25rem] h-[90vh] flex flex-col border-black border-[1px]">
                                     <div className="prod-1-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image priority src={bnnaBg} className="p1-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image priority className="p1-img w-full h-full absolute left-0 top-0 scale-75" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
+                                        <Image priority className="p1-img w-full h-full absolute left-0 top-0 scale-75 object-cover" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-1-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
                                             <div className="font-poppins text-[#b80c09] text-[1.2rem]">BANANA SMORES</div>
                                             <div className="font-poppins text-black text-[.75rem]">Serving Size: 473ml</div>
-                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP.</div>
+                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP</div>
                                         </div>  
                                         <div className="flex items-center">    
                                             <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
@@ -311,16 +267,16 @@ export default function Catalog() {
                                         </div>                                 
                                     </div>
                                 </div>
-                                <div id="product-2" className="prod bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                <div id="product-2" className="prod bg-white rounded-[1.25rem] h-[90vh] flex flex-col border-black border-[1px]">
                                     <div className="prod-2-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image priority src={strBg} className="p2-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image priority className="p2-img w-full h-full absolute left-0 top-0 scale-75" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
+                                        <Image priority className="p2-img w-full h-full absolute left-0 top-0 scale-75 object-cover" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-2-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
                                             <div className="p2-text font-poppins text-[#b80c09] text-[1.2rem]">STRAWBERRY ..</div>
                                             <div className="font-poppins text-black text-[.75rem]">Serving Size: 473ml</div>
-                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP.</div>
+                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP</div>
                                         </div>  
                                         <div className="flex items-center">    
                                             <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
@@ -330,16 +286,16 @@ export default function Catalog() {
                                         </div>                                 
                                     </div>
                                 </div>
-                                <div id="product-3" className="prod bg-white rounded-[1.25rem] h-[125vw] flex flex-col">
+                                <div id="product-3" className="prod bg-white rounded-[1.25rem] h-[90vh] flex flex-col border-black border-[1px]">
                                     <div className="prod-3-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image priority src={wtrmBg} className="p3-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image priority className="p3-img w-full h-full absolute left-0 top-0 scale-75" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
+                                        <Image priority className="p3-img w-full h-full absolute left-0 top-0 scale-75 object-cover" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-3-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
                                             <div className="p3-text font-poppins text-[#b80c09] text-[1.2rem]">WATERMELON ..</div>
                                             <div className="font-poppins text-black text-[.75rem]">Serving Size: 473ml</div>
-                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP.</div>
+                                            <div className="font-poppins text-[#b80c09] text-[1.2rem]">250 EGP</div>
                                         </div>  
                                         <div className="flex items-center">    
                                             <button className="bg-[#b80c09] product-btn rounded-[70%] hover:animate-pulse">
@@ -351,11 +307,11 @@ export default function Catalog() {
                                 </div>
                             </div>
                         </div>
-                        <div className="product  h-[inherit]" id="product-4">
+                        <div className="product pt-[10rem] h-screen" id="product-4">
                             <div className="pop-content relative">
                                 <div className="pop-head flex flex-col">
-                                    <h2 className="p4-head pt-8 font-bulleto text-center text-[1.5em] text-white">We Also Have</h2>
-                                    <h1 className="p4-head  pt-5 font-bulleto text-center mt-[-10px] text-white text-5xl">Popsiclesss !!</h1>
+                                    <h2 className="p4-head font-bulleto text-center text-[1.5em] text-[#b80c09]">We Also Have</h2>
+                                    <h1 className="p4-head pt-2 font-bulleto text-center mt-[-10px] text-[#b80c09] text-5xl">Popsiclesss !!</h1>
                                 </div>
                                 <div className="pop-img flex flex-row justify-around mx-12 mt-10">
                                     <Image priority className="pop-left relative w-[80%] z-30" src={mngPop} alt={""}></Image>

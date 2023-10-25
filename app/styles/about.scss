@@ -6,7 +6,7 @@
 
 @media (min-width: 425px) {
     .about-head{
-        padding-bottom: 140px;
+        padding-bottom: 2rem;
     }
     
 }
@@ -37,10 +37,6 @@
     .about-section{
         height: 170vw;
     }
-    .about-p{
-        margin-right: 5vw; 
-        margin-left: 5vw; 
-    }
 }
 @media (min-width: 1024px) {
     .about-image{
@@ -52,35 +48,22 @@
     }
     .about-p{
         font-size: 1.15em;
-        margin-left: 10vw; 
-        margin-right: 10vw; 
     }
 }
 
 @media (min-width: 1440px) {
     .about-head{
-        padding-bottom: 280px;
-    }
-    .about-image{
-        margin-right: 15vw;
-        margin-left: 15vw;
-        margin-top: -23vh;
+        padding-bottom: 2rem;
     }
     .about-section{
         height: 110vw;
     }
     .about-p{
         font-size: 1.3em;
-        margin-left: 15vw; 
-        margin-right: 15vw; 
     }
 }
 
 @media (min-width: 1920px) {
-    .about-p{
-        margin-right: 20vw;
-        margin-left: 20vw;
-    }
     .about-section{
         height: 90vw;
     }
@@ -91,8 +74,6 @@
 }
 @media (min-width: 2560px) {
     .about-head{
-        padding-bottom: 320px;
-        padding-top: 24vw;
         font-size: 7rem;
     }
     .about-image{
@@ -109,8 +90,5 @@
     }
     .about-p{
         font-size: 2em;
-        margin-left: 20vw; 
-        margin-right: 20vw; 
-        top:55vh;
     }
 }
