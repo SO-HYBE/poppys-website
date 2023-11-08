@@ -60,7 +60,8 @@ export default function Footer (){
   <div className="mx-auto max-w-5xl px-4 pb-10 pt-[5.5rem] sm:px-6 lg:px-8 footer-div">
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">
     &copy; 2023 Poppy's Ice Cream. All rights reserved.</p>
-    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white"><a href="https://flawless.productions/">Made with ❤️ by Flawless Productions</a></p>
+    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">Made with ❤️ by Sohybe Ibrahim</p>
+    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white"><a href="https://flawless.productions/">Flawless Productions</a></p>
     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
       <li>
         <a className="text-white transition hover:text-slate-400" href="/">
