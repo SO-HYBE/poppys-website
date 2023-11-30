@@ -67,67 +67,17 @@ export default function About(){
                         const about = new SplitType(chars as HTMLElement, {types: 'words, chars'}) 
                         //--------------------------- Function for responsiveness ---------------------------------//
                         function media1(width: number) {
-                            if (width >= 768) {
                                 gsap.from(about.chars, {
                                     scrollTrigger: {
                                         trigger: chars,
-                                        start: 'top 80%',
-                                        end: '90% 30%',
-                                        scrub: true  
-                                    },
-                                    duration: 4,
-                                    opacity: 0.2,
-                                    stagger: 0.5
-                                })
-                            } else if(width >= 1024){
-                                gsap.from(about.chars, {
-                                    scrollTrigger: {
-                                        trigger: chars,
-                                        start: 'top 80%',
-                                        end: '120% 30%',
-                                        scrub: true
-                                    },
-                                    duration: 4,
-                                    opacity: 0.2,
-                                    stagger: 0.5
-                                })
-                            } else if(width >= 1920){
-                                gsap.from(about.chars, {
-                                    scrollTrigger: {
-                                        trigger: chars,
-                                        start: 'top 80%',
-                                        end: '100% 30%',
-                                        scrub: true
-                                    },
-                                    duration: 4,
-                                    opacity: 0.2,
-                                    stagger: 0.5
-                                })
-                            } else if(width >= 2560){
-                                gsap.from(about.chars, {
-                                    scrollTrigger: {
-                                        trigger: chars,
-                                        start: 'top 80%',
-                                        end: '150% 30%',
-                                        scrub: true
-                                    },
-                                    duration: 4,
-                                    opacity: 0.2,
-                                    stagger: 0.5
-                                })
-                            } else {
-                                gsap.from(about.chars, {
-                                    scrollTrigger: {
-                                        trigger: chars,
-                                        start: 'top 80%',
-                                        end: 'bottom 70%',
+                                        start: 'top 100%',
+                                        end: 'bottom 100%',
                                         scrub: true
                                     },
                                     duration: 2,
                                     opacity: 0.2,
                                     stagger: 0.2
                                 })
-                            }
                         }
                         
                         // JavaScript code to handle media queries and call the TypeScript function
@@ -142,16 +92,16 @@ export default function About(){
     },[]);
 
     return(
-        <section className="about-section h-[360vw] mp-[200px] snap-mandatory snap-x ">
-            <div className="about bg-[#fefae0] flex flex-col snap-start" ref={aboutRef}>
-                <div className="line bg-[#fefae0] overflow-hidden">
-                    <span className="about-head flex justify-center font-bulleto text-5xl pt-[20rem] text-black">About Us</span>
+        <section className="about-section h-[100vh] mp-[200px] w-screen snap-mandatory snap-x px-[4vw] bg-[#fefae0]">
+            <div className="about flex flex-col snap-start" ref={aboutRef}>
+                <div className="line overflow-hidden">
+                    <span className="about-head flex justify-center font-bulleto text-5xl pt-[10rem] text-[#b80c09]">About Us</span>
                 </div>
-                <div className="about-content flex flex-col-reverse">
-                    <p className="about-p mx-5 justify-center leading-relaxed font-bold mt-5">
+                <div className="about-content flex flex-row-reverse gap-8">
+                    <p className="about-p leading-relaxed font-bold w-1/2">
                         Welcome to Poppy's, a haven where nostalgia reigns supreme and every ice cream scoop becomes a portal to cherished memories. Beyond being a mere ice cream shop, we offer a voyage back in time to the days of carefree innocence. Our flavors encapsulate the essence of joy, aimed at forging connections and weaving new moments with every delightful bite. Join us in this captivating escapade where the past seamlessly merges with the present, resulting in a medley of frozen delights and heartfelt instances.
                     </p>
-                    <div className="about-image mx-4 top-[180px]">
+                    <div className="w-1/2 h-full">
                         <Image priority className="abt-img skewElem object-fill" src={fence} height={1080} width={1920} alt={"About Image with fence background"}></Image>
                     </div>
                 </div>

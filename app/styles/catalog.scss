@@ -5,7 +5,6 @@
     cursor: pointer;
 }
 #product-4{
-    height: 60rem;
     margin-top: 5vh;
 }
 .ov-img{
@@ -104,9 +103,6 @@
     .pop-right{
         width: 70%;
     }
-    .catalog-section{
-        height: 610vw;
-    }
     .cat-head{
         font-size: 2rem;
         line-height: 0.6;
@@ -120,18 +116,9 @@
     .pop-right{
         width: 55%;
     }
-    .catalog-section{
-        height: 560vw;
-    }
-    #product-4{
-        height: 70rem;
-    }
 }
 
 @media (min-width: 768px) {
-    .catalog-section{
-        height: 510vw;
-    }
     .pop-left{
         width: 35%;
         transform: rotate(25deg);
@@ -149,24 +136,6 @@
     .products1-3{
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.75rem;
-    }
-    #product-1{
-        height: 50vw;
-    }
-    #product-2{
-        height: 50vw;
-    }
-    #product-3{
-        height: 50vw;
-    }
-    .catalog-section{
-        height: 180vw
-    }
-}
-
-@media (min-width: 992px) {
-    .catalog-section{
-        height: 170vw;
     }
 }
 
@@ -188,37 +157,8 @@
         font-size: 3em;
     }
 }
-@media (min-width: 1200px) {
-    .catalog-section{
-        height: 134vw;
-    }
-    #product-1{
-        height: 41vw;
-    }
-    #product-2{
-        height: 41vw;
-    }
-    #product-3{
-        height: 41vw;
-    }
-}
 
 @media (min-width: 1440px) {
-    #product-1{
-        height: 45vw;
-    }
-    #product-2{
-        height: 45vw;
-    }
-    #product-3{
-        height: 45vw;
-    }
-    .catalog-section{
-        height: 125vw;
-    }
-    #product-4{
-        height: 100rem;
-    }
     .pop-left{
         width: 20%;
         transform: rotate(30deg) translateX(40px);
@@ -237,26 +177,8 @@
     }
 }
 
-@media (min-width: 1920px) {
-    #product-1{
-        height: 40vw;
-    }
-    #product-2{
-        height: 40vw;
-    }
-    #product-3{
-        height: 40vw;
-    }
-    .catalog-section{
-        height: 110vw;
-    }
-}
-
 
 @media (min-width: 2560px) {
-    .catalog-section{
-        height: 115vw;
-    }
     .pop-left{
         width: 20%;
         transform: rotate(30deg) translateX(60px);
@@ -264,12 +186,6 @@
     .pop-right{
         width: 20%;
         transform: rotate(-30deg) translateX(-60px);
-    }
-    .pop-content{
-        height: 160vh;
-    }
-    #product-4{
-        height: 160vh;
     }
     .pop-head{
         h1{
