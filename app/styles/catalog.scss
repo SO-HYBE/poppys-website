@@ -130,6 +130,9 @@
     .cat-head{
         font-size: 3em;
     }
+    .catalog-section{
+        height: 420vh;
+    }
 }
 
 @media (min-width: 900px){
@@ -155,6 +158,9 @@
     }
     .cat-head{
         font-size: 3em;
+    }
+    .catalog-section{
+        height: 250vh;
     }
 }
 
@@ -199,5 +205,8 @@
     }
     .cat-head{
         font-size: 6em;
+    }
+    .catalog-section{
+        height: 320vh;
     }
 }

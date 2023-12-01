@@ -183,7 +183,7 @@ export default function Catalog() {
                                 scrollTrigger: {
                                     trigger: '.pop-img',
                                     start: 'top center',
-                                    end: 'bottom bottom',
+                                    end: 'bottom center',
                                     scrub: true
 
                                 },
@@ -194,7 +194,7 @@ export default function Catalog() {
                                 scrollTrigger: {
                                     trigger: '.pop-img',
                                     start: 'top center',
-                                    end: 'bottom bottom',
+                                    end: 'bottom center',
                                     scrub: true
 
                                 },
@@ -237,7 +237,7 @@ export default function Catalog() {
 
 
     return(
-        <section className="catalog-section h-[350vh] overflow-hidden bg-[#fefae0]">
+        <section className="catalog-section h-[420vh] overflow-hidden bg-[#fefae0]">
             <div className="catalog h-[inherit]" ref={catRef}>
                 <div className="catalog-content h-[inherit]">
                     <div className="catalog-head">
@@ -251,7 +251,7 @@ export default function Catalog() {
                                 <div id="product-1" className="prod bg-white rounded-[1.25rem] h-[90vh] flex flex-col border-black border-[1px]">
                                     <div className="prod-1-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image priority src={bnnaBg} className="p1-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image priority className="p1-img w-full h-full absolute left-0 top-0 scale-75 object-cover" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
+                                        <Image priority className="p1-img w-full h-full absolute left-0 top-0  scale-110 object-contain" src={banana} alt={"Banana ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-1-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
@@ -270,7 +270,7 @@ export default function Catalog() {
                                 <div id="product-2" className="prod bg-white rounded-[1.25rem] h-[90vh] flex flex-col border-black border-[1px]">
                                     <div className="prod-2-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image priority src={strBg} className="p2-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image priority className="p2-img w-full h-full absolute left-0 top-0 scale-75 object-cover" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
+                                        <Image priority className="p2-img w-full h-full absolute left-0 top-0  scale-110 object-contain" src={strberry} alt={"strawberry ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-2-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
@@ -289,7 +289,7 @@ export default function Catalog() {
                                 <div id="product-3" className="prod bg-white rounded-[1.25rem] h-[90vh] flex flex-col border-black border-[1px]">
                                     <div className="prod-3-img relative h-fit w-full basis-[90%] overflow-hidden rounded-t-[1rem]">
                                         <Image priority src={wtrmBg} className="p3-bg object-cover w-full h-full invisible" alt={""} ></Image>
-                                        <Image priority className="p3-img w-full h-full absolute left-0 top-0 scale-75 object-cover" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
+                                        <Image priority className="p3-img w-full h-full absolute left-0 top-0 scale-110 object-contain" src={wtrmelon} alt={"watermelon ice cream"} height={500} width={500}></Image>
                                     </div>
                                     <div className="prod-3-info basis-[10%] px-[1.5rem] flex flex-row justify-between py-5">
                                         <div className="">
