@@ -140,6 +140,9 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.75rem;
     }
+        .catalog-section{
+        height: 320vh;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -160,7 +163,7 @@
         font-size: 3em;
     }
     .catalog-section{
-        height: 250vh;
+        height: 300vh;
     }
 }
 
